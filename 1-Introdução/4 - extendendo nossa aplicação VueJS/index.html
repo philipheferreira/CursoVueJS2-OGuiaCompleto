@@ -10,7 +10,8 @@
 <body>
   <!-- Montagem do Vue -->
   <div id="app">
-    
+    <input type="" v-on:input="alterarTitulo">
+    <p> {{ titulo }} </p>
   </div>
 
   <script>
@@ -18,7 +19,12 @@
     new Vue({
       el: '#app',
       data: {
-        
+        titulo: 'USando um metodo'
+      },
+      methods: {
+        alterarTitulo(event) {
+          this.titulo = event.target.value
+        }
       }
     });
   </script>
