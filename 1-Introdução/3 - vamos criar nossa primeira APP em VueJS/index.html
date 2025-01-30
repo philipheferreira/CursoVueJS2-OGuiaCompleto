@@ -10,10 +10,7 @@
 <body>
   <!-- Montagem do Vue -->
   <div id="app">
-    <h1>{{ message }}</h1>
-    <input type="text" v-model="message" />
-    <p>Você digitou: {{ message }}</p>
-    <button @click="resetMessage">Resetar</button>
+    <h1>{{ titulo }}</h1>
   </div>
 
   <script>
@@ -21,12 +18,7 @@
     new Vue({
       el: '#app',
       data: {
-        message: 'Olá, Vue 2!'
-      },
-      methods: {
-        resetMessage() {
-          this.message = 'Olá, Vue 2!';
-        }
+        titulo: 'Olá, Vue 2!'
       }
     });
   </script>
