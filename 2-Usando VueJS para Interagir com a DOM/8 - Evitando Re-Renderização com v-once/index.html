@@ -9,7 +9,8 @@
 </head>
 <body>
 	<div id="app">
-	  <p>{{ titulo }}</p>
+	  <p v-once>{{ titulo }}</p> <!-- V-once lê a variavel apenas uma unica vez e mesmo que ocorra uma alteração no estado da informação ele lê o momento definido da leitura das informações. Serve para consumir menos recursos, já que ele só verifica e atualiza uma unica vez -->
+	  <p> {{ saudacao() }} </p>
 	</div>
 
 <script>
@@ -18,7 +19,12 @@
     data: {
       titulo: 'Usando VueJS!'
     },
-    methods: {}
+    methods: {
+    	saudacao: function() {
+    		this.titulo = 'Bom dia!!!'
+    		return this.titulo
+    	}
+    }
   });
 </script>
 </body>
