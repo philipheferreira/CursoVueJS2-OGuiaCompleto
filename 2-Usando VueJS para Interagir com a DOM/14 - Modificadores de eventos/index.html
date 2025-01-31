@@ -9,26 +9,16 @@
 </head>
 <body>
 	<div id="app">
-	  <p>{{ contador }}</p>
-	  <p v-once>{{ contador }}</p>
-	  <button v-on:click="somar">Somar 1</button> <!-- v-on é a diretiva que vai ficar escutando o evento logo na sequencia, como o v-bind que vai fazer uma ligação binding logo na tag. O v-on vai definir a ação que vai disparar a função que está escutando -->
-	  <button v-on:click="subtrair">subtrair 1</button>
+	  <p>{{ variavel }}</p>
 	</div>
 
 <script>
   new Vue({
     el: '#app',
     data: {
-      contador: 0, 
+      variavel: 'Incrivel Vue JS!', 
     },
-    methods: {
-    	somar() {
-    		this.contador++
-    	},
-    	subtrair() {
-    		this.contador--
-    	}
-    }
+    methods: {}
   });
 </script>
 </body>
