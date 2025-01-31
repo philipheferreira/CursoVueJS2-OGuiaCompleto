@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title> 22 - Evitando Re-Renderização com v-once</title>
+	<title> 21 - Entendendo e usando diretivas</title>
 	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </head>
 <body>
@@ -11,6 +11,7 @@
 		<p c3r-bind="abc">{{ teste() }}</p>  <!-- Importa o Vue 2 via CDN -->
 	  <p>{{ titulo }}</p>
 	  <!-- Diretivas são propriedades personalizadas que não são nativas do HTML -->
+	  <!-- Digite isso no negocio de console do motor de busca: document.querySelector('c3r-bind') -->
 	</div>
 
 <script>
