@@ -10,13 +10,15 @@
 <body>
 	<div id="app">
 	  <p>{{ titulo }}</p>
+	  <p v-html> {{ linkHtml }} </p> <!-- v-html: Ele ira interpretar o valor dentro da html como sendo propriedade html e converter -->
 	</div>
 
 <script>
   new Vue({
     el: '#app',
     data: {
-      titulo: 'Usando VueJS!'
+      titulo: 'Usando VueJS!',
+      linkHtml: '<a http://google.com.br>Google</a>'
     },
     methods: {}
   });
