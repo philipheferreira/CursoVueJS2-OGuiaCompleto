@@ -9,17 +9,21 @@
 </head>
 <body>
 	<div id="app">
-	  <p>{{ titulo }}</p>
-
+	  <p>{{ contador }}</p>
+	  <button v-on:click="somar">Somar 1</button> <!-- v-on é a diretiva que vai ficar escutando o evento logo na sequencia, como o v-bind que vai fazer uma ligação binding logo na tag. O v-on vai definir a ação que vai disparar a função que está escutando -->
 	</div>
 
 <script>
   new Vue({
     el: '#app',
     data: {
-      titulo: 'Usando VueJS!', 
+      contador: 0, 
     },
-    methods: {}
+    methods: {
+    	somar() {
+    		this.contador++
+    	}
+    }
   });
 </script>
 </body>
