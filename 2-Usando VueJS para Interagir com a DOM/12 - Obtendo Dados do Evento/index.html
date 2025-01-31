@@ -9,16 +9,21 @@
 </head>
 <body>
 	<div id="app">
-	  <p>{{ variavel }}</p>
+	  <p>{{ contador }}</p>
+	  <button v-on:click="somar">Somar 1</button>
 	</div>
 
 <script>
   new Vue({
     el: '#app',
     data: {
-      variavel: 'Incrivel Vue JS!', 
+      contador: 0, 
     },
-    methods: {}
+    methods: {
+    	somar() {
+    		this.contador++
+    	}
+    }
   });
 </script>
 </body>
