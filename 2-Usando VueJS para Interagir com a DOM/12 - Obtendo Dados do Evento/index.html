@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> 20 - Binding de Atributos</title>
+	<!-- Importa o Vue 2 via CDN -->
+	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+	  <p>{{ contador }}</p>
+	  <p v-once>{{ contador }}</p>
+	  <button v-on:click="somar">Somar 1</button> <!-- v-on é a diretiva que vai ficar escutando o evento logo na sequencia, como o v-bind que vai fazer uma ligação binding logo na tag. O v-on vai definir a ação que vai disparar a função que está escutando -->
+	  <button v-on:click="subtrair">subtrair 1</button>
+	</div>
+
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      contador: 0, 
+    },
+    methods: {
+    	somar() {
+    		this.contador++
+    	},
+    	subtrair() {
+    		this.contador--
+    	}
+    }
+  });
+</script>
+</body>
+</html>
