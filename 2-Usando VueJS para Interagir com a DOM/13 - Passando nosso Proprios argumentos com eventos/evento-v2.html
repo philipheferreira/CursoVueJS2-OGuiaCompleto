@@ -9,16 +9,28 @@
 </head>
 <body>
 	<div id="app">
-	  <p>{{ variavel }}</p>
+	  <p>{{ contador }}</p>
+	  <button v-on:click="somar(5)">Somar 1</button>
+	  <p v-on:mousemove="atualizarXY">Mouse: {{x}} e {{y}} </p>
 	</div>
 
 <script>
   new Vue({
     el: '#app',
     data: {
-      variavel: 'Incrivel Vue JS!', 
+      contador: 0, 
+      x: 0,
+      y: 0,
     },
-    methods: {}
+    methods: {
+    	somar(passo) {
+    		this.contador += passo
+    	},
+    	atualizarXY(event) {
+    		this.x = event.clientX
+    		this.y = event.clientY
+    	}
+    }
   });
 </script>
 </body>
