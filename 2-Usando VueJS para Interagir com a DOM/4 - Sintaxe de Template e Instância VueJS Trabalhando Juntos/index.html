@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> 18 - Sintaxe de Template e Instância VueJS Trabalhando juntos</title>
+	<!-- Importa o Vue 2 via CDN -->
+	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+	  <p>{{ titulo }}</p>
+	  <p>{{ saudacao() }}</p> <!-- Como é um metodo é necessario as duas barras -->
+	</div>
+
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      titulo: 'Usando VueJS!'
+    },
+    methods: {
+      saudacao: function(){
+      	return 'Boa semana!'
+      }
+    }
+  });
+</script>
+</body>
+</html>
