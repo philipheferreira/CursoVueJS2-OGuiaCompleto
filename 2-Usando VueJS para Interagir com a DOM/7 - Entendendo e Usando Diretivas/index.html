@@ -3,22 +3,29 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title> 21 - Entendendo e Usando Diretivas</title>
-	<!-- Importa o Vue 2 via CDN -->
+	<title> 22 - Evitando Re-Renderização com v-once</title>
 	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </head>
 <body>
 	<div id="app">
+		<p c3r-bind="abc">{{ teste() }}</p>  <!-- Importa o Vue 2 via CDN -->
 	  <p>{{ titulo }}</p>
+	  <!-- Diretivas são propriedades personalizadas que não são nativas do HTML -->
 	</div>
 
 <script>
   new Vue({
     el: '#app',
     data: {
-      titulo: 'Usando VueJS!'
+      titulo: 'Usando VueJS!',
+      teste: 'Testando a operação'
     },
-    methods: {}
+    methods: {
+    	teste: function() {
+    		console.log(this)
+    		return this.teste
+    	}
+    }
   });
 </script>
 </body>
