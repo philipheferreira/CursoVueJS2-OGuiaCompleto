@@ -10,7 +10,7 @@
 <body>
 	<div id="app">
 	  <p>{{ contador }}</p>
-	  <button v-on:click="somar(5)">Somar 1</button>
+	  <button v-on:click="somar($event, 5)">Somar 1</button> <!-- O Evento sera chamado e adicionado como uma informação javascript dentro do metodo -->
 	  <p v-on:mousemove="atualizarXY">Mouse: {{x}} e {{y}} </p>
 	</div>
 
@@ -23,8 +23,10 @@
       y: 0,
     },
     methods: {
-    	somar(passo) {
+    	somar(evento, passo) {
+    		console.log(passo, evento)
     		this.contador += passo
+
     	},
     	atualizarXY(event) {
     		this.x = event.clientX
