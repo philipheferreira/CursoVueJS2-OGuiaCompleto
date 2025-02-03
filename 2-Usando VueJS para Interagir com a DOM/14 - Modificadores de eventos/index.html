@@ -10,15 +10,22 @@
 <body>
 	<div id="app">
 	  <p>{{ contador }}</p>
+	  <button> Somar </button>
+	  <p></p>
 	</div>
 
 <script>
   new Vue({
     el: '#app',
     data: {
-      contador: 0 
+      contador: 0, 
+      x: 0,
+      y: 0
     },
-    methods: {}
+    methods: {
+    	somar(){},
+    	atualizarXY(){}
+    }
   });
 </script>
 </body>
