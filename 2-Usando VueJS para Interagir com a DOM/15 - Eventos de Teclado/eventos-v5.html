@@ -10,7 +10,14 @@
 <body>
 	<div id="app">
 	  <hr/>
+	  <p></p>
 	  <input type="text" v-on:keyup="exibirAlerta" name="">
+	  <hr/>
+	  <p></p>
+	  <input type="text" v-on:keyup.enter="exibirAlerta" name="">
+	  <hr/>
+	  <p></p>
+	  <input type="text" v-on:keyup.alt="exibirAlerta" name="">
 	</div>
 
 <script>
