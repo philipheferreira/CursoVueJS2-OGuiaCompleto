@@ -11,7 +11,12 @@
 	<div id="app">
 	  <p>{{ contador }}</p>
 	  <button v-on:click="somar(5, $event)"> Somar </button>
-	  <p v-on:mousemove="atualizarXY">Mouse: {{ x }} e {{ y }}</p>
+	  <p v-on:mousemove="atualizarXY">Mouse: {{ x }} e {{ y }}
+	  	<span v-on:mousemove="parar">PARA AQUI!!!</span>
+	  	<span>PARAR AQUI TAMBÉM!!!</span> <!-- Impede a continuidade da ação em quanto estiver nessa situação -->
+	  </p>
+	  <a v-on:click.prevent href="http://google.com">Google</a> <!-- link por html. O prevent é um comando pelo vue que previne o acionamento da operação padrão -->
+	  <a v-on:click="naoNavegar" href="http://google.com">Outro Google</a> <!-- Aciona  -->
 	</div>
 
 <script>
@@ -26,6 +31,16 @@
     	somar(passo, event){
     		console.log(passo, event)
     		this.contador += passo
+    	},
+    	atualizarXXY(event) {
+    		this.x = event.clientX
+    		this.y = event.clientY
+    	}, 
+    	parar(event) {
+    		event.stopPropagation() // Impede a continuidade da ação em quanto esse evento for acionado
+    	},
+    	naoNavegar(event){
+    		event.preventDefault() // Evento que impede qualquer ação de acontecer
     	}
     }
   });
