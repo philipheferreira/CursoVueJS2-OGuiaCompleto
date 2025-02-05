@@ -10,18 +10,18 @@
 <body>
 	<div id="app">
 		<!-- 1° Passo: One-Way-binding -->
-	  <p>{{ titulo }}</p>
+	  <p>{{ titulo1 }}</p>
 	  <input type="text" v-bind:value="titulo"> <!-- Realiza um bind diretamento com o valor de titulo. Então é um unico binding. Em uma direção -->
 
 	  <!-- 2° Passo: Forma mais bruta de two-Way-Binding usando o v-bind e o v-on juntos-->
 
-	  <p> {{titulo}} </p>
+	  <p> {{ titulo2 }} </p>
 	  <input type="text" v-bind:value="titulo"
 	  	v-on:input="titulo = $event.target.value">
 
 	  <!-- 3° Passo: Forma Mais pratica de Two-Way-Binding usando o v-model-->
 
-	  <p> {{titulo}} </p>
+	  <p> {{ titulo3 }} </p>
 	  <input type="text" v-model="titulo">
 
 	</div>
@@ -30,7 +30,9 @@
   new Vue({
     el: '#app',
     data: {
-      titulo: "Usando VueJS!"
+      titulo1: "Usando VueJS!",
+      titulo2: "Usando VueJS!",
+      titulo3: "Usando VueJS!"
     },
     methods: {
     	somar(){
