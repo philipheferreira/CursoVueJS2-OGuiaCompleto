@@ -9,8 +9,11 @@
 </head>
 <body>
 	<div id="app">
-	  <p>{{ contador }}</p>
-	  <p v-on:mousemove=""></p>
+		<p>{{ contador }}</p>
+	  <p>{{ contador * 2}}</p> <!-- Essa expressão será interpolada. O resultado será multiplicado por 2 sempre -->
+	  <p>{{ contador > 10 ? 'Maior do que 10' : 'Menor do que 10'}}</p> <!-- A expressão é imterpolada com relação as condições -->
+	  <!-- Para colocar as interpolações expressões complexas como if, else, for não irão funcionar -->
+	  <button v-on:click="somar">somar 1</button>
 	</div>
 
 <script>
@@ -21,7 +24,11 @@
       x: 0,
       y: 0
     },
-    methods: {}
+    methods: {
+    	somar(){
+    		this.contador++
+    	}
+    }
   });
 </script>
 </body>
