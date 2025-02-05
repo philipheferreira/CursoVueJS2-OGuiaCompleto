@@ -9,9 +9,12 @@
 </head>
 <body>
 	<div id="app">
-	  <p>{{ contador }}</p>
-	  <button v-on:click="somar(5, $event)"> Somar </button>
-	  <p v-on:mousemove="atualizarXY">Mouse: {{ x }} e {{ y }}</p>
+	  <p>Contador: {{ contador }} || {{contador2}} </p>
+	  <p>Resultado: {{resultado}}</p>
+	  <hr/>
+	  <button v-on:click="aumentar"> Aumentar </button>
+		<button v-on:click="contador2++"> Aumentar 2</button>
+		<button v-on:click="diminuir"> Diminuir </button>
 	</div>
 
 <script>
@@ -19,13 +22,21 @@
     el: '#app',
     data: {
       contador: 0, 
-      x: 0,
-      y: 0
+      contador2: 0
     },
+    computed: {
+    	resultado(){
+    		console.log("Metodo computed resultado chamado...")
+    		return this.contador >= 5 ? 'Maior ou igual a 5' : 'Menor que 5'
+    	}
+    },
+    watch: {},
     methods: {
-    	somar(passo, event){
-    		console.log(passo, event)
-    		this.contador += passo
+    	aumentar(){
+    		this.contador++
+    	},
+    	diminuir(){
+    		this.contador--
     	}
     }
   });
