@@ -30,7 +30,26 @@
     		return this.contador >= 5 ? 'Maior ou igual a 5' : 'Menor que 5'
     	}
     },
-    watch: {},
+    watch: { // ele vai monitorar uma variavel. watch => assistir
+    	/*
+    	contador(novo, antigo){ // Verifica cada vez que a variavel é atualizada
+    		console.log(novo, antigo)
+    	}
+    	*/
+    	/*
+    	contador(novo, antigo){
+    		const instanciaVue = this//para a funcao funcionar this precisa ser chamada por uma variavel
+    		setTimeout(function(){//chamada antiga de uma funcao
+    			instanciaVue.contador = 0
+    		}, 2000)//contador zera a funcao a cada 2 segundos
+    	}
+    	*/
+    	contador(novo, antigo){
+    		setTimeout(() => { // mesma chamada de cima mas en arrow function
+    			this.contador = 0
+    		}, 2000)
+    	}
+    },
     methods: {
     	aumentar(){
     		this.contador++
