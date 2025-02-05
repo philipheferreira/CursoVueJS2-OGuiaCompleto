@@ -10,7 +10,9 @@
 <body>
 	<div id="app">
 	  <p>{{ contador }}</p>
-	  <button v-on:click="somar"> Somar </button>
+	  <button @click="somar"> Somar </button> <!-- substitui o v-on:click pelo @ -->
+	  <hr/>
+	  <input type="text" name="" :value="contador"> <!-- substitui o v-bind:value pelo : --> 
 	</div>
 
 <script>
