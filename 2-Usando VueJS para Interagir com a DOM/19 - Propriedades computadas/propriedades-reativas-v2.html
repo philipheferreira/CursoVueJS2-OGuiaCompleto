@@ -9,19 +9,28 @@
 </head>
 <body>
 	<div id="app">
-	  <p>{{ contador }}</p>
+	  <button v-on:click="aumentar"> Aumentar </button>
 	  <button v-on:click="somar(5)"> Somar </button>
+	  <p>Contador: {{ contador }}</p>
+	  <p>Resultado: {{ resultado }}</p>
+	  <p>Valor: {{valor}} </p>
 	</div>
 
 <script>
   new Vue({
     el: '#app',
     data: {
-      contador: "Usando VueJS!"
+      contador: 0,
+      valor: 0,
+      resultado: 0
     },
     methods: {
-    	somar(passo){
-    		this.contador += passo
+    	somar(passo){ //
+    		this.valor += passo
+    	},
+    	aumentar: function(){ //
+    		this.contador++
+    		this.resultadao = this.contador >= 5 ? '' : ''
     	}
     }
   });
