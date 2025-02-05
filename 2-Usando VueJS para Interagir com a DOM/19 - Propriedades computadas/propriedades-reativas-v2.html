@@ -9,11 +9,16 @@
 </head>
 <body>
 	<div id="app">
+	  <p>Contador: {{ contador }} || {{contador2}} </p>
+	  <p>Resultado: {{ resultado() }}</p>
+	  <!--<p>Resultado: {{resultado}} </p> Quando chamado como computed tirar as abas -->
 	  <button v-on:click="aumentar"> Aumentar </button>
-	  <button v-on:click="somar(5)"> Somar </button>
-	  <p>Contador: {{ contador }}</p>
-	  <p>Resultado: {{ resultado }}</p>
+	  <button v-on:click="contador2++">Aumentar 2</button>
+	  <button v-on:click="diminuir"> Diminuir </button>
+	  <hr/>
 	  <p>Valor: {{valor}} </p>
+	  <button v-on:click="somar(5)"> Somar </button>
+
 	</div>
 
 <script>
@@ -21,16 +26,28 @@
     el: '#app',
     data: {
       contador: 0,
-      valor: 0,
-      resultado: 0
+      contador2: 0,
+      valor: 0
     },
+    computed: {
+    	//resultado(){
+    	//	console.log('Metodo computed resultado chamado...')
+    	//	return this.contador >= 5 ? 'Maior ou igual a 5' : 'Menor que 5'
+    	}
+    }
     methods: {
     	somar(passo){ // forma mais usada de chamar função criada
     		this.valor += passo
     	},
     	aumentar: function(){ // forma menos usada mas é basicamente a mesma coisa
     		this.contador++
-    		this.resultadao = this.contador >= 5 ? '' : ''
+    	},
+    	diminuir(){
+    		this.contador--
+    	}, 
+    	resultado(){
+    		console.log("Metodo console chamado...")
+    		return this.contador >= 5 ? 'Maior ou igual a 5' : 'Menor que 5'
     	}
     }
   });
