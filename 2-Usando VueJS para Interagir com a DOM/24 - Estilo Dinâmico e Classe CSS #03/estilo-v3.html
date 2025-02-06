@@ -3,7 +3,7 @@
 
 <style>
 	
-	#app {
+	.caixas {
 		display: flex;
 		justify-content: space-around;
 	}
@@ -30,15 +30,21 @@
 		background-color: blue;
 	}
 
+	.girar{
+		transform: rotate(45deg);
+	}
+
 </style>
 
 <div id="app">
-	
-	<div class="demo" :class="estilo1" 
-	@click="aplicarC1 = !aplicarC1"></div> <!-- Chamando classe estilo1 dentro do computed para realizar as operações -->
-	<div class="demo"></div>
-	<div class="demo" :class="classeCSS"></div>
-
+	<div class="caixas">
+		<div class="demo" :class="estilo1" 
+		@click="aplicarC1 = !aplicarC1"></div> <!-- Chamando classe estilo1 dentro do computed para realizar as operações -->
+		<div class="demo" :class="[aplicarC2, 'girar']"></div>
+		<div class="demo" :class="classeCSS"></div> <!-- faz um binding na classe com base na variavel existente -->
+	</div>
+	<hr/>
+	<input type="text" v-model="classeCSS"> <!-- faz um two way binding atualizando as informações dentro da variavel em tempo real -->
 </div>
 
 
@@ -47,7 +53,8 @@
     el: '#app',
     data: {
     	aplicarC1: false,
-    	classeCSS: 'c1'
+    	classeCSS: 'c1', // variavel que recebe as informações
+    	aplicarC2: 'c2'
     },
     computed: {
     	estilo1() { // metodo criado dentro de computed
