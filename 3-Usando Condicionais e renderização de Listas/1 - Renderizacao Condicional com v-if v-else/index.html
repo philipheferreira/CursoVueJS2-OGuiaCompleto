@@ -8,7 +8,11 @@
 
 <div id="app">
 	
-
+	<p v-if="logado">Usuário Logado: {{nome}} </p> <!-- v-if que reage a variavel logado -->
+	<p v-if="!logado">Nenhum usuário logado</p> <!-- reage a resposta negativa de logado -->
+	<button @click="logado = !logado">
+		{{ logado ? 'Sair' : 'Entrar' }}
+	</button>
 
 </div>
 
@@ -17,7 +21,8 @@
 	new Vue({
 		el: '#app',
 		data: {
-
+			nome: 'Maria',
+			logado: false
 		},
 		computed: {},
 		methods: {}
