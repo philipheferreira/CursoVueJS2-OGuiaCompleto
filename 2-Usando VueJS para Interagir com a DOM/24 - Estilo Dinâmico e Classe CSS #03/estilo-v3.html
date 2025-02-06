@@ -30,6 +30,10 @@
 		background-color: blue;
 	}
 
+	.c4{
+		background-color: yellow;
+	}
+
 	.girar{
 		transform: rotate(45deg);
 	}
@@ -39,9 +43,10 @@
 <div id="app">
 	<div class="caixas">
 		<div class="demo" :class="estilo1" 
-		@click="aplicarC1 = !aplicarC1"></div> <!-- Chamando classe estilo1 dentro do computed para realizar as operações -->
+		@click="aplicarC1 = !aplicarC1"></div> <!-- Chamando classe estilo1 dentro do computed para realizar as operações. Clicar altera o valor dentro da variavel aplicarC1 entre falso e verdadeiro -->
 		<div class="demo" :class="[aplicarC2, 'girar']"></div>
 		<div class="demo" :class="classeCSS"></div> <!-- faz um binding na classe com base na variavel existente -->
+		<div class="demo" :class="[{'c4': aplicarC4}, {girar: aplicarGirar}]" @click="aplicarC4 = !aplicarC4"></div> <!-- Aplicar um array dentro do class para colocar e definir necessidades do gira, no caso validações -->
 	</div>
 	<hr/>
 	<input type="text" v-model="classeCSS"> <!-- faz um two way binding atualizando as informações dentro da variavel em tempo real -->
@@ -54,7 +59,9 @@
     data: {
     	aplicarC1: false,
     	classeCSS: 'c1', // variavel que recebe as informações
-    	aplicarC2: 'c2'
+    	aplicarC2: false,
+    	aplicarC4: false,
+    	aplicarGirar: true
     },
     computed: {
     	estilo1() { // metodo criado dentro de computed
