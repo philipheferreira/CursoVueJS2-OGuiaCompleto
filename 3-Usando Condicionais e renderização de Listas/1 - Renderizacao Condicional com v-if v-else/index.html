@@ -9,7 +9,9 @@
 <div id="app">
 	
 	<p v-if="logado">Usuário Logado: {{nome}} </p> <!-- v-if que reage a variavel logado -->
+	<p v-else>Nenhum usuário logado 2</p> <!-- Em vez de usar a variavel com negação pode ser utilizado o else -->
 	<p v-if="!logado">Nenhum usuário logado</p> <!-- reage a resposta negativa de logado -->
+
 	<button @click="logado = !logado">
 		{{ logado ? 'Sair' : 'Entrar' }}
 	</button>
