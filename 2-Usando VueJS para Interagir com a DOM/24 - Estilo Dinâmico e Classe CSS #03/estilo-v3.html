@@ -37,7 +37,7 @@
 	<div class="demo" :class="estilo1" 
 	@click="aplicarC1 = !aplicarC1"></div> <!-- Chamando classe estilo1 dentro do computed para realizar as operações -->
 	<div class="demo"></div>
-	<div class="demo"></div>
+	<div class="demo" :class="classeCSS"></div>
 
 </div>
 
@@ -46,7 +46,8 @@
   new Vue({
     el: '#app',
     data: {
-    	aplicarC1: false
+    	aplicarC1: false,
+    	classeCSS: 'c1'
     },
     computed: {
     	estilo1() { // metodo criado dentro de computed
