@@ -34,9 +34,9 @@
 
 <div id="app">
 	
-	<div class="demo" :class="{c1: aplicarC1}" 
-	@click="aplicarC1 = !aplicarC1"></div> <!-- Quando clicar ele ira adicionar as mudanças do CSS para essa aplicação -->
-	<div class="demo" :class="{'c2': aplicarC2}" @click="aplicarC2 = !aplicarC2"></div> <!-- Mesmo em aspas o CSS funciona -->
+	<div class="demo" :class="estilo1" 
+	@click="aplicarC1 = !aplicarC1"></div> <!-- Chamando classe estilo1 dentro do computed para realizar as operações -->
+	<div class="demo"></div>
 	<div class="demo"></div>
 
 </div>
@@ -46,8 +46,15 @@
   new Vue({
     el: '#app',
     data: {
-    	aplicarC1: false,
-    	aplicarC2: false
+    	aplicarC1: false
+    },
+    computed: {
+    	estilo1() { // metodo criado dentro de computed
+    		return {
+    			c1: this.aplicarC1,
+    			c2: !this.aplicarC1
+    		}
+    	}
     },
     methods: {}
   });
