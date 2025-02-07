@@ -5,6 +5,14 @@
 <div id="app">
 
 	<ul>
+		<li v-for="(cor, i) in cores"
+			:key="cor"> {{i + 1}}) {{ cor }} <!-- key é utilizado para como referencia dentro do v-for para definir com melhor uso as informações. Ajuda rastrear as variaveis de uma forma mais facil e eficiente -->
+		</li>
+	</ul>
+	<button @click="cores.push('branca')">Adicionar Branca</button>
+	<hr/>
+
+	<ul>
 		<li>
 			<div v-for="(pessoa, index) in pessoas"> <!-- pessoa foi criado em v-for para pegar dados individuais da lista pessoas -->
 				{{ pessoa.nome }} - {{index}}
@@ -22,6 +30,7 @@
 	new Vue({
 		el: '#app',
 		data: {
+			cores: ['Vermelho', 'Verde', 'Amarelo', 'Azul'],
 			pessoas: [
 				{nome: 'Ana', idade: 26, peso: 59},
 				{nome: 'Guilherme', idade: 22, peso: 89}
