@@ -3,17 +3,17 @@
 <style type="text/css"></style>
 
 <div id="app">
-	
+
 	<ul>
-		<li v-for="(cor, i) in cores"> {{i + 1}}) {{ cor }} </li> <!--  -->
+		<li>
+			<div v-for="(pessoa, index) in pessoas"> <!-- pessoa foi criado em v-for para pegar dados individuais da lista pessoas -->
+				{{ pessoa.nome }} - {{index}}
+				<div v-for="(valor, chave, index) in pessoa">
+					{{ chave }} = {{ valor }} ({{ index + 1 }}) <!-- valor pega o valor dentro da variavel, chave pega o nome da variavel e index pega a numeração referente a cada uma -->
+				</div>
+			</div>
+		</li>
 	</ul>
-
-	<hr/>
-
-	<template v-for="(cor, i) in cores">
-		<h1> {{ cor }} </h1>
-		<p> {{ i }} </p>
-	</template>
 
 </div>
 
@@ -22,7 +22,6 @@
 	new Vue({
 		el: '#app',
 		data: {
-			cores: ['Vermelho', 'Verde', 'Amarelo', 'Azul'],
 			pessoas: [
 				{nome: 'Ana', idade: 26, peso: 59},
 				{nome: 'Guilherme', idade: 22, peso: 89}
@@ -35,10 +34,6 @@
 </script>
 
 <style type="text/css">
-	
-	ul {
-		list-style: none;
-	}
 
 	h1, p{
 		display: inline;
