@@ -6,10 +6,11 @@
 
 </style>
 
+<!-- ref é uma propriedade do vue e foge do padrão dos dois pontos. Só é preciso utilizar ref -->
 
 <div id="app">
 	
-	<h1> {{aula}} </h1>
+	<h1 ref="aulaRef" > {{aula}} </h1>
 	<h2> {{ modulo }} </h2>
 	<button @click="alterarAula">Alterar Aula</button>
 	<button @click="AlterarModulo">Alterar Módulo</button>
@@ -19,7 +20,7 @@
 
 <script type="text/javascript">
 	
-	new Vue({
+	const vm = new Vue({
 		el: '#app',
 		data: {
 			aula: 'Aula: Usando Refs',
@@ -32,9 +33,17 @@
 			},
 			alterarModulo(){
 				this.modulo += '#'
+				console.log(this.$ref.aulaRef.innerText) // consulta o valor aulaRef pelo DOM
 			}
 		}
 	})
 
 
+// Não é recomendado realizar fazer interação direta. Porque você existe o estado interno da instancia do Vue, em que ele diz que é outro valor, e ocorre a manupulação do valor do DOM que foi alterado diretamente. Quando clicar o botao alterar Aula ele ira acrescentar o valor salvo dentro da instancia do Vue
+vm.$refs.aulaRef.innerText = "Alterado diretamente :c"
 </script>
+
+<!-- usar no console do motor de internet => document.querySelector('h1') -->
+
+<!-- mudar o valor usando um comando pelo motor de busca => document.querySelector('h1').innerText = 'Bla bla' -->
+
