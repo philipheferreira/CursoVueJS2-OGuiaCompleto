@@ -5,19 +5,37 @@
 
 </style>
 
+<!-- Não é recomendado criar muitas instancias porque pode fazer a aplicação ficar instavel e dificil de encontrar variaveis especificas dentro do codigo -->
 
 <div id="app">
 	
-
+	{{ titulo1 }} - {{descricao1}} {{descricao2}}
 
 </div>
 
+<div id="app2">
+	
+	{{ titulo }} - {{descricao1}}  {{descricao2}}
+
+</div>
 
 <script type="text/javascript">
 	
 	new Vue({
 		el: '#app',
-		data: {},
+		data: {
+			titulo: 'Testando a instancia 1',
+			descricao1: ''
+		},
+		computed: {},
+		methods: {}
+	})
+
+	new Vue({
+		el: '#app2',
+		data: {
+			titulo: 'Testando a instancia 2'
+		},
 		computed: {},
 		methods: {}
 	})
