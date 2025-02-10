@@ -34,7 +34,7 @@
 		computed: {},
 		methods: {
 			alterar() {
-				vm1.titulo += '!!!!'
+				vm2.titulo += '!!!!' //O metodo está acessando a segunda estancia para realizar as modificações
 			}
 		}
 	})
@@ -47,7 +47,7 @@
 		computed: {},
 		methods: {
 			alterar() {
-				vm2.titulo += '????'
+				vm1.titulo += '????' //O metodo criado está acessando a primeira instancia vm1 para realizar as modificações
 			}
 		}
 	})
