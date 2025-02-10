@@ -8,19 +8,29 @@
 
 <div id="app">
 	
+	{{titulo}}
 
-
+	<button v-on:click="alterar">testar</button>
 
 </div>
 
 
 <script type="text/javascript">
 	
-	new Vue({
+	const vm = new Vue({
 		el:'#app',
-		data: {},
+		data: {
+			titulo: 'teste 1'
+		},
 		computed: {},
-		methods: {}
+		methods: {
+			alterar() {
+				this.titulo += '!'
+			}
+		}
 	})
+
+	vm.novaInfo = 'Teste' // Essa propriedade não é reativa. A partir do momento que é criada de forma externa alguns get e sets reativos não são gerados porque essa variavel é externa
+	console.log(vm.novaInfo);
 
 </script>
