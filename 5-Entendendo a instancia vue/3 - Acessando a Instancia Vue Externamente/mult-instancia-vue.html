@@ -9,13 +9,15 @@
 
 <div id="app">
 	
-	{{ titulo1 }} - {{descricao1}} {{descricao2}}
+	{{ titulo }} - {{descricao1}} {{descricao2}} <!-- Apenas a descricao1 ira funcionar por se tratar da estancia 1 -->
 
 </div>
 
+<hr/>
+
 <div id="app2">
 	
-	{{ titulo }} - {{descricao1}}  {{descricao2}}
+	{{ titulo }} - {{descricao1}}  {{descricao2}} <!-- Apenas a descricao2 ira funcionar por se tratar da estancia 2 -->
 
 </div>
 
@@ -25,7 +27,7 @@
 		el: '#app',
 		data: {
 			titulo: 'Testando a instancia 1',
-			descricao1: ''
+			descricao1: 'Essa é uma descrição para provar que a chamada na estancia 1 funciona corretamente.'
 		},
 		computed: {},
 		methods: {}
@@ -34,7 +36,8 @@
 	new Vue({
 		el: '#app2',
 		data: {
-			titulo: 'Testando a instancia 2'
+			titulo: 'Testando a instancia 2',
+			descricao2: 'Essa é uma descrição para provar que a chamada na estancia 2 funciona corretamente.'
 		},
 		computed: {},
 		methods: {}
