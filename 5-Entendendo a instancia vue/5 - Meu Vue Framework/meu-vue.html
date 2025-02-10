@@ -8,16 +8,45 @@
 
 <div id="app">
 	
+	{{ nome }}  {{ sobrenome }}  {{ 1 + 1 }}
 
 </div>
 
 <script type="">
 
-new Vue({
+	function MeuVue(params){
+		this.$el = document.querySelector(params.el)
+		this.$data = params.data
+
+		for(let atr in this.$data){
+			Object.defineProperty(this, atr, {
+				get: () => {
+					return this.$data[atr]
+				},
+				set: value => {
+					this.$data[atr] = value
+				}
+			})
+		}
+
+		// Interpolar
+		const regex = /\{\{([\s\w+]*)\}\}/g
+	}
+
+const vm = new Vue({
 	el: '#app',
-	data: {},
+	data: {
+		nome: 'Maria',
+		sobrenome: 'Silva'
+	},
 	computed: {},
 	methods: {}
 })
+// O vue consegue fazer atualizações diretas em todo o proxy para atualziar elas
+console.log(vm.nome)
+console.log(vm.$data.nome)
+
+vm.nome = 'Pedro'
+console.log(vm.$data.nome)
 
 </script>
