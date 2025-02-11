@@ -1,17 +1,46 @@
 <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 
+<style type="text/css">
+	
+	
 
-<style type="text/css"></style>
+</style>
 
 
 <div id="app"></div>
 
+
 <script type="text/javascript">
 	
-	new Vue({
-		el: '#app',
-		data: {},
+	const vm = new Vue({
+		//el: '#app', // o comando mount preenche o nome app definido previamente
+		template: `
+			<div>
+				<h1 ref="aulaRef" > {{aula}} </h1>
+				<h2> {{ modulo }} </h2>
+				<button @click="alterarAula">Alterar Aula</button>
+				<button @click="alterarModulo">Alterar Módulo</button>
+			</div>
+			`,
+		data: {
+			aula: 'Aula: Montando Instância',
+			modulo: 'Módulo: Instância Vue'
+		},
 		computed: {},
-		methods: {}
+		methods: {
+			alterarAula() {
+				this.aula += '#'
+			},
+			alterarModulo(){
+				this.modulo += '#'
+			}
+		}
 	})
+
+	//vm.$mount('#app') //Uma forma valida de definir o nome da instancia criada, que recebe o nome de vm
+
+	vm.$mount() //cria uma instancia sem nome. A instancia foi montada mas como não tem nome ela não tem nada definido nela, logo nada é inicializado
+	document.querySelector('#app').appendChild(vm.$el) // faz uma injeção direta na pagina com o el dentro do vm, aplicando o nome #app dentro da instancia vm
 </script>
+
+
