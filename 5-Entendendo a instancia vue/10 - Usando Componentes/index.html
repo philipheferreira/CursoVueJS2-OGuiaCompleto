@@ -7,7 +7,10 @@
 </style>
 
 
-<div id="app">
+<div>
+	
+	<componente></componente>
+
 	<comp></comp>
 	<comp></comp>
 	<comp></comp>
@@ -17,12 +20,12 @@
 <script type="text/javascript">
 	
 	Vue.component('comp', {
-		template: '<h1>Componente</h1>'
+		template: '<h1>Componente criado para as operações</h1><br/><p>Criado primeiro componente para o projeto</p>'
 	})
 
 
 	const vm = new Vue({
-		el: '#app', // Cria uma instancia para ser chamada como componente mesmo não sendo
+		el: 'componente', // Cria uma instancia para ser chamada como componente mesmo não sendo
 		template: `
 			<div>
 				<h1 ref="aulaRef" > {{aula}} </h1>
