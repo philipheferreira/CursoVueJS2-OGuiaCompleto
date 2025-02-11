@@ -2,24 +2,41 @@
 
 <style type="text/css">
 	
-
+	
 
 </style>
 
 
 <div id="app">
 	
-
-
+	<h1 ref="aulaRef" > {{aula}} </h1>
+	<h2> {{ modulo }} </h2>
+	<button @click="alterarAula">Alterar Aula</button>
+	<button @click="alterarModulo">Alterar Módulo</button>
 
 </div>
 
+
 <script type="text/javascript">
 	
-	el: '#app',
-	data: {},
-	methods: {},
-	computed: {}
+	const vm = new Vue({
+		el: '#app',
+		data: {
+			aula: 'Aula: Montando Instância',
+			modulo: 'Módulo: Instância Vue'
+		},
+		computed: {},
+		methods: {
+			alterarAula() {
+				this.aula += '#'
+			},
+			alterarModulo(){
+				this.modulo += '#'
+			}
+		}
+	})
 
 
 </script>
+
+
