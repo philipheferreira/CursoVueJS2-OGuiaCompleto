@@ -7,13 +7,22 @@
 </style>
 
 
-<div id="app"></div>
+<div id="app">
+	<comp></comp>
+	<comp></comp>
+	<comp></comp>
+</div>
 
 
 <script type="text/javascript">
 	
+	Vue.component('comp', {
+		template: '<h1>Componente</h1>'
+	})
+
+
 	const vm = new Vue({
-		//el: '#app', // o comando mount preenche o nome app definido previamente
+		el: '#app', // Cria uma instancia para ser chamada como componente mesmo não sendo
 		template: `
 			<div>
 				<h1 ref="aulaRef" > {{aula}} </h1>
@@ -36,11 +45,6 @@
 			}
 		}
 	})
-
-	//vm.$mount('#app') //Uma forma valida de definir o nome da instancia criada, que recebe o nome de vm
-
-	vm.$mount() //cria uma instancia sem nome. A instancia foi montada mas como não tem nome ela não tem nada definido nela, logo nada é inicializado
-	document.querySelector('#app').appendChild(vm.$el) // faz uma injeção direta na pagina com o el dentro do vm, aplicando o nome #app dentro da instancia vm
 </script>
 
 
