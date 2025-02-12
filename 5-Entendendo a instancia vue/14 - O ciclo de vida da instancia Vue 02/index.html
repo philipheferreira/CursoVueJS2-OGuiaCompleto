@@ -10,7 +10,7 @@
 	
 	<h1> {{titulo}} </h1>
 	<button @click="titulo += '#'">Alterar Título</button>
-	<button @click="$destroy()">Destruir</button>
+	<button @click="$destroy()">Destruir</button> <!--  -->
 </div>
 
 <script type="text/javascript">
@@ -18,8 +18,32 @@
 	new Vue({
 		el: '#app',
 		data: {
-			titulo: 'Ciclo de vida'
+			titulo: 'Ciclo de vida' 
 		},
+		beforeCreate(){
+			console.log('Antes de criar') // é chamado uma unica vez na criação da instancia
+		},
+		created(){
+			console.log("Criado") // é chamado uma unica vez na criação da instancia
+		},
+		beforeMount(){
+			console.log("Antes de montar (DOM)") // é chamado uma unica vez na criação da instancia
+		},
+		mounted(){
+			console.log("DOM Montada") // é chamado uma unica vez na criação da instancia
+		},
+		beforeUpdate(){
+			console.log("Antes de Atualizar") // Será chamado sempre que houvere uma mudança a ser feita
+		},
+		updated(){
+			console.log("Atualizado") // Será chamado sempre que houvere uma mudança a ser feita
+		},
+		beforeDestroy(){
+			console.log("Antes de detruir")
+		}
+		destroyed(){
+			console.log("Destruido")
+		}
 		methods: {},
 		computed: {}
 	})	
