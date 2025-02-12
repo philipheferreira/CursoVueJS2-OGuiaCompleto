@@ -1,0 +1,10 @@
+npm i -g @vue/cli => Comando para instalar globalmente o CLI Vue
+
+// Depois de instalar tudo isso é só usar os comandos disponíveis
+
+vue create projeto-simples => Criar projeto usando CLI 
+
+// Entrar na pasta 
+cd projeto-simples
+
+npm run serve
