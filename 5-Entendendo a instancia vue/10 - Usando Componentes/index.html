@@ -7,9 +7,7 @@
 </style>
 
 
-<div>
-	
-	<componente></componente>
+<div id="app">
 
 	<comp></comp>
 	<comp></comp>
@@ -17,37 +15,36 @@
 </div>
 
 
-<script type="text/javascript">
+<script >
 	
-	Vue.component('comp', {
-		template: '<h1>Componente criado para as operações</h1><br/><p>Criado primeiro componente para o projeto</p>'
-	})
+	 Vue.component('comp', {
+        template: `
+            <div>
+                <h1>{{ aula }}</h1>
+                <h2>{{ modulo }}</h2>
+                <button @click="alterarAula">Alterar Aula</button>
+                <button @click="alterarModulo">Alterar Módulo</button>
+            </div>
+        `,
+        data: function() {
+            return {
+                aula: 'Aula: Montando Instância Vue',
+                modulo: 'Módulo: Instância Vue'
+            }
+        },
+        methods: {
+            alterarAula() {
+                this.aula += '#'
+            },
+            alterarModulo() {
+                this.modulo += '#'
+            }
+        }
+    })
 
-
-	const vm = new Vue({
-		el: 'componente', // Cria uma instancia para ser chamada como componente mesmo não sendo
-		template: `
-			<div>
-				<h1 ref="aulaRef" > {{aula}} </h1>
-				<h2> {{ modulo }} </h2>
-				<button @click="alterarAula">Alterar Aula</button>
-				<button @click="alterarModulo">Alterar Módulo</button>
-			</div>
-			`,
-		data: {
-			aula: 'Aula: Montando Instância',
-			modulo: 'Módulo: Instância Vue'
-		},
-		computed: {},
-		methods: {
-			alterarAula() {
-				this.aula += '#'
-			},
-			alterarModulo(){
-				this.modulo += '#'
-			}
-		}
-	})
+    const vm = new Vue({
+        el: '#app'
+    }) // necessario ter uma instancia criada para poder receber um componente
 </script>
 
 
