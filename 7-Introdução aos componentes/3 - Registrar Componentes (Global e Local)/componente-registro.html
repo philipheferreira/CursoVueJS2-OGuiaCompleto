@@ -12,6 +12,10 @@
 
 </div>
 
+<div id="app2">
+	<contador2></contador2>
+</div>
+
 
 <script type="text/javascript">
 	// Registro Global
@@ -28,18 +32,23 @@
 				contador: 0
 			}
 		}
-	}
+	} // componente criado globalmente
 
 
 	new Vue({
 		el: '#app1',
+		// Registro locao: esse registro components pertence apenas a essa instancia
 		components: {
 			contador1: contador
-		} // serve para registrar contadores que foram criados de forma global
+		} // serve para registrar components que foram criados de forma global
 	}) // Primeira instancia criada com sucesso, com o objetivo de receber os valores dentro
 
 	new Vue({
-		el: '#app2'
+		el: '#app2',
+		// Registro locao: esse registro components pertence apenas a essa instancia
+		components: {
+			contador2: contador
+		} // serve para registrar componentes que foram criados de forma global
 	}) // Segunda instancia criada com sucesso, com o objetivo de receber os valores dentro
 
 </script>
