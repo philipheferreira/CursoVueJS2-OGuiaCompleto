@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import Contador from './Contador.vue'
 export default {
     name: 'ContadoresVue',
     components: {
