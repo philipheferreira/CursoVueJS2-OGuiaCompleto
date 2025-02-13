@@ -12,6 +12,7 @@
 
 <script>
 export default {
+    name: 'ContadorVue',
     data() {
         return {
             contador: 0
