@@ -4,22 +4,13 @@
   <div id="app">
     <h2>Contadores</h2>
 
-    {{ contador }}
+    <app-contador></app-contador> <!-- Chamando componente que foi declarado Globalmente -->
   </div>
 </template>
 
 <script>
 export default {
 
-// data: { // forma errada, não ira funcionar de jeito nenhum
-//  contador: 0
-// }
-
-data() {
-  return { 
-    contador: 0
-  }
-}
 }
 </script>
 
