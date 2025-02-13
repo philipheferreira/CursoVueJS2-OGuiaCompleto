@@ -8,12 +8,17 @@
 
 
 <div id="app">
-	
+	<h2>Caso em que todos os contadores dividem os mesmos dados</h2>	
 <contador></contador>
-
+<contador></contador>
+	
+	<h2>Caso em que os componentes não dividem o mesmo dado para que possa utilizar de forma individual cada um</h2>
+	<CONtador></CONtador>
+	<CONTADOR></CONTADOR>
+	<Contador></Contador>
 </div>
 
-
+<!-- Essa informação já havia sido repassada antes -->
 <script type="text/javascript">
 	Vue.component('contador', {
 		template: `
@@ -28,7 +33,7 @@
 				contador: 0
 			}
 		}
-	}) //criado um component de forma global
+	}) //criado um component de forma global e os dados de cada um dos componentes são compartilhados entre si
 
 	new Vue({
 		el: '#app',
