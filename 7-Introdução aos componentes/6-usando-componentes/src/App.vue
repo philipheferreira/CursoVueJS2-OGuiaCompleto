@@ -5,6 +5,7 @@
     <h2>Contadores</h2>
 
     <app-contadores></app-contadores> <!-- Chamando componente que foi declarado Globalmente -->
+    <app-contadores v-for="c in 5" :key="c"/>
   </div>
 </template>
 

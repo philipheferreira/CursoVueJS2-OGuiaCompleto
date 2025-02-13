@@ -9,7 +9,7 @@ import Contador from './Contador.vue'
 export default {
     name: 'ContadoresVue',
     components: {
-        'app-contador': Contador
+        'app-contador': Contador // component que está sendo puxado de contador
     }
 }
 </script>
