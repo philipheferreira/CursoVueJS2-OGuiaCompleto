@@ -29,7 +29,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped> /* scoped faz com que todas as modificações no codigo permanessam nesse codigo */
 
     .contador span {
         border-bottom: 1px solid #CCC;
