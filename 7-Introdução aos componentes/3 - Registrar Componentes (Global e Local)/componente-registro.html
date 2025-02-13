@@ -8,32 +8,34 @@
 
 
 <div id="app1">
-
-	<contador></contador>
+	<contador1></contador1>
 
 </div>
 
 
 <script type="text/javascript">
-	
-	Vue.component('contador', {
+	// Registro Global
+	const contador = {
 		template: `
-				<div>
-					<span> {{contador}} </span>
-					<button @click="contador++"> + </button>
-					<button @click="contador--"> - </button>
-
-				</div>
-			`,
-			data(){
-				return{
-					contador: 0
-				}
+			<div>
+				<span> {{contador}} </span>
+				<button @click="contador++"> + </button>
+				<button @click="contador--"> - </button>
+			</div>
+		`,
+		data(){
+			return{
+				contador: 0
 			}
-	})
+		}
+	}
+
 
 	new Vue({
-		el: '#app1'
+		el: '#app1',
+		components: {
+			contador1: contador
+		} // serve para registrar contadores que foram criados de forma global
 	}) // Primeira instancia criada com sucesso, com o objetivo de receber os valores dentro
 
 	new Vue({
