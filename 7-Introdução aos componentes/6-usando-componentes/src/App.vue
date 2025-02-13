@@ -4,7 +4,7 @@
   <div id="app">
     <h2>Contadores</h2>
 
-    <app-contador></app-contador> <!-- Chamando componente que foi declarado Globalmente -->
+    <app-contadores></app-contadores> <!-- Chamando componente que foi declarado Globalmente -->
   </div>
 </template>
 
