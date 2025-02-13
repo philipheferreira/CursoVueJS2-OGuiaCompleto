@@ -7,16 +7,37 @@
 </style>
 
 
-<div id="app">
-	
+<div id="app1">
 
-
+	<contador></contador>
 
 </div>
 
 
 <script type="text/javascript">
 	
+	Vue.component('contador', {
+		template: `
+				<div>
+					<span> {{contador}} </span>
+					<button @click="contador++"> + </button>
+					<button @click="contador--"> - </button>
 
-	
+				</div>
+			`,
+			data(){
+				return{
+					contador: 0
+				}
+			}
+	})
+
+	new Vue({
+		el: '#app1'
+	}) // Primeira instancia criada com sucesso, com o objetivo de receber os valores dentro
+
+	new Vue({
+		el: '#app2'
+	}) // Segunda instancia criada com sucesso, com o objetivo de receber os valores dentro
+
 </script>
