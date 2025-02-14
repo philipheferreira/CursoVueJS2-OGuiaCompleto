@@ -1,5 +1,7 @@
 <template>
-  
+    <div>
+        Ola, eu sou um footer
+    </div>
 </template>
 
 <script>
