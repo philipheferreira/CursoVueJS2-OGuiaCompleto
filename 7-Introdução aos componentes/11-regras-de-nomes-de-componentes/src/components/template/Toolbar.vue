@@ -1,12 +1,10 @@
 <template>
-    <div>
-        
-    </div>
+    <div>Ola, eu sou uma toolbar</div>
 </template>
 
 <script>
 export default {
-
+    name:'ToolbarVue'
 }
 </script>
 

@@ -14,7 +14,7 @@
 import Footer from '../src/components/template/Footer.vue'
 import Menu from '../src/components/template/Menu.vue'
 import Toolbar from '../src/components/template/Toolbar.vue'
-import Dropdown from '../src/components/user/Dropdown.vue'
+import Dropdown from './src/components/user/Dropdown.vue'
 import Carousel  from './components/widgets/Carousel.vue' 
 export default {
   name: 'App',
