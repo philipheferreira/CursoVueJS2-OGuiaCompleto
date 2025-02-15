@@ -1,10 +1,10 @@
 <template>
   <div id="app">
 
-    <app-footer></app-footer>
+    <app-footer></app-footer> <!-- Toda vez que eu colocar um ifem na variavel dentro de data retorn o Vue deduz qual vai ser a parte com maiusculo automaticamente -->
     <app-menu></app-menu>
     <app-toolbar></app-toolbar>
-    <app-dropdown></app-dropdown>
+    <Dropdown></Dropdown>
     <app-carousel></app-carousel>
 
   </div>
@@ -14,16 +14,16 @@
 import Footer from '../src/components/template/Footer.vue'
 import Menu from '../src/components/template/Menu.vue'
 import Toolbar from '../src/components/template/Toolbar.vue'
-import Dropdown from './src/components/user/Dropdown.vue'
+import Dropdown from './components/user/DropDown.vue'
 import Carousel  from './components/widgets/Carousel.vue' 
 export default {
   name: 'App',
   components: {
-    'app-footer' : Footer,
-    'app-menu' : Menu,
-    'app-toolbar' : Toolbar,
-    'app-dropdown' : Dropdown,
-    'app-carousel' : Carousel
+    appFooter : Footer, 
+    appMenu : Menu,
+    appToolbar : Toolbar, // Caso todas as necessidades do vue em criação de variaveis esteja atendido não é necessario para o Vue o nome dado estar entre parenteses
+    Dropdown, // Outra forma de chamada é não nomear os nomes, só chamar da forma direta que eles foram criadas
+    appCarousel : Carousel
   }
 }
 </script>
