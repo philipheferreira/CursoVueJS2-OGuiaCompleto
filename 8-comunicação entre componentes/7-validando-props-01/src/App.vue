@@ -1,17 +1,17 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <app-usuario/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import AppUsuario from './components/Usuario.vue'
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    AppUsuario
   }
 }
 </script>
@@ -24,5 +24,17 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+h1, h2, p {
+	margin: 10px;
+	padding: 0px;
+}
+
+button {
+	font-size: 1.5rem;
+	padding: 5px 15px;
+	border-radius: 4px;
+	margin: 10px;
 }
 </style>
