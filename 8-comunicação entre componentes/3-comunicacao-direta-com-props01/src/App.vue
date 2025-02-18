@@ -1,13 +1,12 @@
 <template>
   <div id="app">
-
     <app-usuario/>
-
   </div>
 </template>
 
 <script>
-import AppUsuario from "./components/Usuario.vue";
+import AppUsuario from './components/Usuario.vue'
+
 
 export default {
   name: 'App',
@@ -18,7 +17,6 @@ export default {
 </script>
 
 <style>
-
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -39,5 +37,4 @@ button {
 	border-radius: 4px;
 	margin: 10px;
 }
-
 </style>
