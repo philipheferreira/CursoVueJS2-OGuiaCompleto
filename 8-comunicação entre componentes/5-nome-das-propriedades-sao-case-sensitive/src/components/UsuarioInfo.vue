@@ -1,6 +1,6 @@
 <template>
 
-    <div class="componente">
+    <div class="componente"> <!-- class é case insensitive, então colocar essas diretivas maiusculo ou minusculo não faz diferença -->
 
         <h2>As informações de Usuário</h2>
         <p>Vários detalhes...</p>
