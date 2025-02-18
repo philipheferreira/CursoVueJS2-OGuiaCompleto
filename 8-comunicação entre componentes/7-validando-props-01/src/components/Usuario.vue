@@ -5,7 +5,8 @@
         <p>Esse é um componente muito legal!</p>
         <div class="componentes">
 
-            <app-usuario-info nome="Pedro" v-bind:nome1="nomeCompleto" />
+            <app-usuario-info :nome="nomeCompleto" v-bind:nome1="nomeCompleto" />
+            <app-usuario-info nome="1" v-bind:nome1="nomeCompleto" />
             <app-usuario-editar />
 
         </div>
