@@ -5,7 +5,7 @@
         <p>Esse é um componente muito legal!</p>
         <div class="componentes">
 
-            <app-usuario-info nome="Pedro" v-bind:nome1="nomeCompleto" /> <!-- A variavel nome usa comando estatico para passar as informações, com a variavel nomeCompleto ela foi criada no data e bindada para repassar as infos e ser recebida no outro componente -->
+            <app-usuario-info nome="Pedro" v-bind:nome1="nomeCompleto" />
             <app-usuario-editar />
 
         </div>
