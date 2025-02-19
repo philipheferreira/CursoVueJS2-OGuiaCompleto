@@ -35,7 +35,7 @@ export default {
     },
     methods: {
         alterarNome(){
-            this.nome = 'Ana'
+            this.nomeCompleto = 'Ana'
         }
     }
 }
