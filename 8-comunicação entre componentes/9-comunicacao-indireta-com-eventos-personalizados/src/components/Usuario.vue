@@ -3,6 +3,7 @@
     <div class="container">
         <h1>Componente Usuário</h1>
         <p>Esse é um componente muito legal!</p>
+        <button @click="alterarNome">Alterar Nome</button>
         <div class="componentes">
 
             <app-usuario-info :nome="nomeCompleto" v-bind:nome1="nomeCompleto" /> <!-- Dentro de aspas ele vai interpretar como um string, se eu mandar true ou false será interpretado como boolean. Mandando numero ira como number -->
@@ -30,6 +31,11 @@ export default {
     data(){
         return {
             nomeCompleto: 'Philiphe Siqueira Ferreira'
+        }
+    },
+    methods: {
+        alterarNome(){
+            this.nome = 'Ana'
         }
     }
 }
