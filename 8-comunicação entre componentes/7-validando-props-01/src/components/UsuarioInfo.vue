@@ -15,7 +15,15 @@
 
     export default{
         name: 'usuarioInfo',
-        props: ['nome', 'nome1'],
+        // props: ['nome', 'nome1'], //Forma mais geral de receber as coisas
+        props: {
+            // nome: String // Define que espera receber uma String com os dados
+            nome: { // Cria um objeto de informações e definições dentro da variavel
+                type: String, // Informa que a variavel deve receber uma string 
+                // required: true, // Diz que a variavel é obrigatoria, ou seja, ela deve ser repassada
+                default: 'Anonimo' // Caso
+            }
+        },
         methods: {
             inverterNome(palavra){
                 return palavra.split('').reverse().join() //inverter o nome que foi passado, que está sendo usado palavra dentro de metodos
