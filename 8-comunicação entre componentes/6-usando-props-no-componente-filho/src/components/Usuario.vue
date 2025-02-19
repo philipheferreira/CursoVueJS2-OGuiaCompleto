@@ -3,6 +3,7 @@
     <div class="container">
         <h1>Componente Usuário</h1>
         <p>Esse é um componente muito legal!</p>
+        <button v-on:click="alterarNome">Alterar Nome</button>
         <div class="componentes">
 
             <app-usuario-info nome="Pedro" v-bind:nome1="nomeCompleto" />
@@ -29,6 +30,11 @@ export default {
     data(){
         return {
             nomeCompleto: 'Philiphe Siqueira Ferreira'
+        }
+    },
+    methods: {
+        alterarNome(){
+            this.nomeCompleto = "Ana Leticia Filho"
         }
     }
 }
