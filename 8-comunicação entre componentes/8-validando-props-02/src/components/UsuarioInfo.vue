@@ -21,7 +21,10 @@
             nome: { // Cria um objeto de informações e definições dentro da variavel para receber melhor os valores props com validações
                 type: String, // Informa que a variavel deve receber uma string 
                 // required: true, // Diz que a variavel é obrigatoria, ou seja, ela deve ser repassada
-                default: 'Anonimo' // Caso
+                // default: 'Anonimo' // Caso
+                default: function() { // Cria o default com base em uma função que eu queria da minha maneira
+                    return Array(10).fill(0).join(',') //Usei uma logica maluca pra gerar um valor 0, 10 vezes separado por virgulas
+                }
             }
         },
         methods: {
