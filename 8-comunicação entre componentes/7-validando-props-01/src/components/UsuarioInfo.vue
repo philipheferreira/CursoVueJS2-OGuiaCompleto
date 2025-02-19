@@ -18,7 +18,7 @@
         // props: ['nome', 'nome1'], //Forma mais geral de receber as coisas
         props: {
             // nome: String // Define que espera receber uma String com os dados
-            nome: { // Cria um objeto de informações e definições dentro da variavel
+            nome: { // Cria um objeto de informações e definições dentro da variavel para receber melhor os valores props com validações
                 type: String, // Informa que a variavel deve receber uma string 
                 // required: true, // Diz que a variavel é obrigatoria, ou seja, ela deve ser repassada
                 default: 'Anonimo' // Caso
