@@ -4,7 +4,7 @@
 
         <h2>As informações de Usuário</h2>
         <p>Vários detalhes...</p>
-        <p>Nome do usuario pelo props e estatico: <strong> {{ nome }} </strong> </p> <!-- Forma mais direta e pratica de passar pela props -->
+        <p>Nome do usuario pelo props e estatico: <strong> {{ inverterNome(nome) }} </strong> </p> <!-- Forma mais direta e pratica de passar pela props -->
         <p>Nome do usuario sendo chamado por binding criado na variavel principal  : <strong> {{ inverterNome(nome1) }} </strong>  </p> <!-- Existe a partir das propriedades existe a possibilidade de trabalhar dados dentro de data -->
     </div>
 
@@ -21,10 +21,14 @@
             nome: { // Cria um objeto de informações e definições dentro da variavel para receber melhor os valores props com validações
                 type: String, // Informa que a variavel deve receber uma string 
                 // required: true, // Diz que a variavel é obrigatoria, ou seja, ela deve ser repassada
-                // default: 'Anonimo' // Caso
-                default: function() { // Cria o default com base em uma função que eu queria da minha maneira
-                    return Array(10).fill(0).join(',') //Usei uma logica maluca pra gerar um valor 0, 10 vezes separado por virgulas
-                }
+                default: 'Anonimo' // Caso
+                // default: function() { // Cria o default com base em uma função que eu queria da minha maneira
+                //     return Array(10).fill(0).join(',') //Usei uma logica maluca pra gerar um valor 0, 10 vezes separado por virgulas
+                // }
+            },
+            nome1: {
+                type: String,
+                required: true
             }
         },
         methods: {
