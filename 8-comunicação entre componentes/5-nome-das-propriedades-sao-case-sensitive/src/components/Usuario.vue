@@ -3,6 +3,7 @@
     <div class="container">
         <h1>Componente Usuário</h1>
         <p>Esse é um componente muito legal!</p>
+        <button v-on:click="alterarNome">Alterar nome</button>
         <div class="componentes">
 
             <app-usuario-info nome="Pedro" v-bind:nome1="nomeCompleto" /> <!-- Comandos bindados que são variaveis são case sensitives -->
@@ -30,6 +31,9 @@ export default {
         return {
             nomeCompleto: 'Philiphe Siqueira Ferreira'
         }
+    },
+    alterarNome(){
+        this.nomeCompleto = "Ana Leticia Nascimento"
     }
 }
 
