@@ -3,6 +3,7 @@
     <div class="container">
         <h1>Componente Usuário</h1>
         <p>Esse é um componente muito legal!</p>
+        <p>Nome é <strong> {{ nomeCompleto }} </strong></p>
         <button @click="alterarNome">Alterar Nome</button>
         <div class="componentes">
 
