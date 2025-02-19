@@ -7,8 +7,12 @@
         <button @click="alterarNome">Alterar Nome</button>
         <div class="componentes">
 
-            <app-usuario-info :nome="nomeCompleto" v-bind:nome1="nomeCompleto" /> <!-- Dentro de aspas ele vai interpretar como um string, se eu mandar true ou false será interpretado como boolean. Mandando numero ira como number -->
-            <app-usuario-info nome="1" v-bind:nome1="nomeCompleto" />
+            <app-usuario-info 
+            :nome="nomeCompleto" 
+            v-bind:nome1="nomeCompleto" 
+            @reiniciar-nome="reiniciarNome"
+            /> <!-- Dentro de aspas ele vai interpretar como um string, se eu mandar true ou false será interpretado como boolean. Mandando numero ira como number -->
+            <app-usuario-info nome="1" v-bind:nome1="nomeCompleto" @reiniciar-nome="reiniciarNome"/>
             <app-usuario-editar />
 
         </div>
@@ -37,6 +41,9 @@ export default {
     methods: {
         alterarNome(){
             this.nomeCompleto = 'Ana'
+        },
+        reiniciarNome(novoNome) {
+            this.nomeCompleto = novoNome;
         }
     }
 }

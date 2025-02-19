@@ -31,7 +31,7 @@
                 return palavra.split('').reverse().join() //inverter o nome que foi passado, que está sendo usado palavra dentro de metodos
             },
             reiniciarNome(){
-                this.nomeCompleto = "Philiphe Siqueira Ferreira"
+                this.$emit('reiniciar-nome', "Philiphe Siqueira Ferreira");
             }
         }
     }
