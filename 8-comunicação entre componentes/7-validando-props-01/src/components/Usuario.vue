@@ -5,7 +5,7 @@
         <p>Esse é um componente muito legal!</p>
         <div class="componentes">
 
-            <app-usuario-info :nome="nomeCompleto" v-bind:nome1="nomeCompleto" /> <!-- Dentro de aspas ele vai interpretar como um string, se eu mandar true ou false será interpretado como boolean. Mandando numero ira como number -->
+            <app-usuario-info :nome="nome" v-bind:nome1="nomeCompleto" /> <!-- Dentro de aspas ele vai interpretar como um string, se eu mandar true ou false será interpretado como boolean. Mandando numero ira como number -->
             <app-usuario-info nome="1" v-bind:nome1="nomeCompleto" />
             <app-usuario-editar />
 
@@ -29,7 +29,8 @@ export default {
     },
     data(){
         return {
-            nomeCompleto: 'Philiphe Siqueira Ferreira'
+            nomeCompleto: 'Philiphe Siqueira Ferreira',
+            nome: 'Pedro'
         }
     }
 }
