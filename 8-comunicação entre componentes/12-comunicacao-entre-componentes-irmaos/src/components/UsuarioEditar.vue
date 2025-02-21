@@ -4,7 +4,8 @@
 
         <h2>Alterar os dados de Usuário</h2>
         <p>Edite as informações</p>
-
+        <p> Idade do usuario: <strong> {{ idadeLocal }} </strong>  </p>
+        <button @click="alterarIdade"> Alterar Idade</button>
     </div>
 
 </template>
@@ -12,7 +13,18 @@
 <script>
 
     export default{
-        name: 'usuarioEditar'
+        name: 'usuarioEditar',
+        props: { 
+            idade: Number 
+        },
+        data() {
+            return {
+                idadeLocal: this.idade
+            }
+        },
+        alterarIdade(){
+            this.idadeLocal = 33
+        }
     }
 
 </script>

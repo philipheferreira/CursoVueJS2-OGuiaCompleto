@@ -1,21 +1,23 @@
- <!-- Comando necessario para fazer a comunicação com o componente de forma inversa. Usando callback para comunicar filho com o pai -->
+<!-- Usando um componente pai em comum para poder conectar os componentes filhos. pasando valor numero -->
 
  <template>
     <div class="container">
         <h1>Componente Usuário</h1>
         <p>Esse é um componente muito legal!</p>
         <p>Nome é <strong> {{ nomeCompleto }} </strong></p>
+        <p> Idade  <strong> {{ idade }} </strong> </p>
         <button @click="alterarNome">Alterar Nome</button>
         <div class="componentes">
 
             <app-usuario-info 
             :nome="nomeCompleto" 
+            :idade="idade"
             v-bind:nome1="nomeCompleto" 
             @reiniciar-nome="reiniciarNome"
             :reiniciarFn="reiniciarNomePrincipal"
             /> <!-- Dentro de aspas ele vai interpretar como um string, se eu mandar true ou false será interpretado como boolean. Mandando numero ira como number -->
-            <app-usuario-info nome="1" v-bind:nome1="nomeCompleto" @reiniciar-nome="reiniciarNome"/>
-            <app-usuario-editar />
+            <app-usuario-info nome="1" v-bind:nome1="nomeCompleto" @reiniciar-nome="reiniciarNome" :idade="idade" />
+            <app-usuario-editar :idade="idade"/>
 
         </div>
 
@@ -37,7 +39,8 @@ export default {
     },
     data(){
         return {
-            nomeCompleto: 'Philiphe Siqueira Ferreira'
+            nomeCompleto: 'Philiphe Siqueira Ferreira',
+            idade: 21
         }
     },
     methods: {
