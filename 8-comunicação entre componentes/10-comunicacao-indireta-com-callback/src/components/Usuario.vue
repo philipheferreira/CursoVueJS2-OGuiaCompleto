@@ -1,4 +1,4 @@
-    <!-- Foco da Aula: A partir do componente filho estou tentando comunicar com o componente pai -->
+ <!-- Comando necessario para fazer a comunicação com o componente de forma inversa. Usando callback para comunicar filho com o pai -->
 
     <template>
         <div class="container">
@@ -12,6 +12,7 @@
                 :nome="nomeCompleto" 
                 v-bind:nome1="nomeCompleto" 
                 @reiniciar-nome="reiniciarNome"
+                :reiniciarFn="reiniciarNomePrincipal"
                 /> <!-- Dentro de aspas ele vai interpretar como um string, se eu mandar true ou false será interpretado como boolean. Mandando numero ira como number -->
                 <app-usuario-info nome="1" v-bind:nome1="nomeCompleto" @reiniciar-nome="reiniciarNome"/>
                 <app-usuario-editar />
@@ -43,9 +44,9 @@
             alterarNome(){
                 this.nomeCompleto = 'Ana'
             },
-            reiniciarNome(novoNome) {
-                this.nomeCompleto = novoNome;
-            }
+            reiniciarNomePrincipal() { // Função criada para se comunicar com o componente filho
+                this.nomeCompleto = 'Philiphe Siqueira Ferreira'
+            },
         }
     }
     
