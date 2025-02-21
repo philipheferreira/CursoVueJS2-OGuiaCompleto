@@ -1,5 +1,6 @@
-<template>
+    <!-- Foco da Aula: A partir do componente filho estou tentando comunicar com o componente pai -->
 
+<template>
     <div class="container">
         <h1>Componente Usuário</h1>
         <p>Esse é um componente muito legal!</p>
