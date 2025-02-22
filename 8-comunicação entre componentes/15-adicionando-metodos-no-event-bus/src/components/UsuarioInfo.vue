@@ -39,7 +39,7 @@ import barramento from '@/barramento'
             }
         },
         created() {
-            barramento.$on('idadeMudou', (idade) =>{ // isso é uma função callback
+            barramento.quandoIdadeMudar(idade =>{ // isso é uma função callback
               /* eslint-disable */  this.idade = idade 
             })
         }
