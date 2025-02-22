@@ -4,7 +4,7 @@
 
         <h2>Alterar os dados de Usuário</h2>
         <p>Edite as informações</p>
-        <p> Idade do usuario: <strong> {{ idadeLocal }} </strong>  </p>
+        <p> Idade do usuario: <strong> {{ idade }} </strong>  </p>
         <button @click="alterarIdade"> Alterar Idade</button>
     </div>
 
@@ -22,6 +22,7 @@ import barramento from '@/barramento'
         },
         methods: {
             alterarIdade(){
+           /* eslint-disable */ this.idade += 1
             barramento.$emit('idadeMudou', 33) // Emite o evento para o barramento
             }
         }
