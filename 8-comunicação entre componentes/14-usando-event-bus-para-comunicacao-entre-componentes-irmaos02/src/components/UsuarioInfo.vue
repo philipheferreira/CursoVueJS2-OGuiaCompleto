@@ -15,7 +15,7 @@
 
 
 <script>
-
+import barramento from '@/barramento'
     export default{
         name: 'usuarioInfo',
         props: {
@@ -35,8 +35,13 @@
                 return palavra.split('').reverse().join() //inverter o nome que foi passado, que está sendo usado palavra dentro de metodos
             },
             reiniciarNome(){
-                this.$emit('reiniciar-nome', "Philiphe Siqueira Ferreira");
+                barramento.$emit('reiniciar-nome', "Philiphe Siqueira Ferreira");
             }
+        },
+        created() {
+            barramento.$on('idadeMudou', (idade) =>{ // isso é uma função callback
+                this.idade = idade
+            })
         }
     }
 

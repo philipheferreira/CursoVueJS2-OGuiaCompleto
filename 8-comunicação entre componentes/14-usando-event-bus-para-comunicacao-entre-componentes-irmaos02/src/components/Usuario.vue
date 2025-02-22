@@ -15,7 +15,6 @@
             v-bind:nome1="nomeCompleto" 
             @reiniciar-nome="reiniciarNome"
             :reiniciarFn="reiniciarNomePrincipal"
-            @idadeMudou="idade = $event"
             /> <!-- Dentro de aspas ele vai interpretar como um string, se eu mandar true ou false será interpretado como boolean. Mandando numero ira como number -->
             <app-usuario-info nome="1" v-bind:nome1="nomeCompleto" @reiniciar-nome="reiniciarNome" :idade="idade" />
             <app-usuario-editar :idade="idade" @idadeMudou="idade = $event"/> <!-- :idade faz o binding para passar a informação e o @idadeMudou recebe o event de idade no componente filho e repassa para os irmãos -->
@@ -29,6 +28,7 @@
 
 
 <script>
+import barramento from '@/barramento'
 import AppUsuarioInfo from './UsuarioInfo.vue'
 import AppUsuarioEditar from './UsuarioEditar.vue'
 
@@ -43,6 +43,12 @@ export default {
             nomeCompleto: 'Philiphe Siqueira Ferreira',
             idade: 21
         }
+    },
+    created() {
+        // Escutando o evento emitido pelo barramento
+        barramento.$on('idadeMudou', (novaIdade) => {
+            this.idade = novaIdade
+        })
     },
     methods: {
         alterarNome(){

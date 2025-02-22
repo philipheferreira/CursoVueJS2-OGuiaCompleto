@@ -11,21 +11,18 @@
 </template>
 
 <script>
-
+import barramento from '@/barramento'
     export default{
         name: 'usuarioEditar',
         props: { 
             idade: Number
         },
         data() {
-            return {
-                idadeLocal: 21
-            }
+            return {}
         },
         methods: {
             alterarIdade(){
-                this.idadeLocal = 33
-                this.$emit('idadeMudou', 33) // manda a idade alterada para o pai e os irmãos
+            barramento.$emit('idadeMudou', 33) // Emite o evento para o barramento
             }
         }
 
