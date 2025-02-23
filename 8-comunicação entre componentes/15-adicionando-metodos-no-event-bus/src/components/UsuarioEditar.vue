@@ -23,7 +23,7 @@ import barramento from '@/barramento'
         methods: {
             alterarIdade(){
            /* eslint-disable */ this.idade += 1
-            barramento.$emit('idadeMudou', 33) // Emite o evento para o barramento
+            barramento.alterarIdade(this.idade) // Emite o evento para o barramento
             }
         }
 
