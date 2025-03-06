@@ -5,6 +5,7 @@
             <button @click="numero++">&gt;</button>
         </span>
         {{ numero }} {{ indice }}
+        {{ citacoes[indice].texto }} <!-- Faz com que eu tenha acesso a lista citações, usando o metodo indice dentro do computed fazendo o controle das operações -->
     </div>
 </template>
 

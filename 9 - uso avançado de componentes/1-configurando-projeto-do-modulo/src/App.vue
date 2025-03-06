@@ -1,13 +1,13 @@
 <template>
 	<div id="app">
-		<Citacoes />
-		<Sobre />
+		<citacoes />
+		<sobre />
 	</div>
 </template>
 
 <script>
 import Citacoes from './components/citacoes'
-import Sobre from './components/Sobre'
+import Sobre from './components/sobre'
 
 export default {
 	components: { Citacoes, Sobre }
