@@ -4,7 +4,11 @@
             <button @click="numero--">&lt;</button>
             <button @click="numero++">&gt;</button>
         </span>
-        <Citacao :texto="citacoes[indice].textoLocal"></Citacao> <!-- Enviando os dados para o props do componente citacao receber -->
+        <Citacao>
+            <h1> {{ citacoes[indice].autor }} </h1>
+            <p> {{ citacoes[indice].textoLocal }} </p>
+            <h6> {{ citacoes[indice].autor }} </h6>
+        </Citacao> <!-- Enviando os dados para o props do componente citacao receber -->
     </div>
 </template>
 
