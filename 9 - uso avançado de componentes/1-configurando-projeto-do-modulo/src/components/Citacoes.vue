@@ -10,6 +10,7 @@
 
 <script>
 export default {
+    name: "citacoesComponent",
     data() {
         return {
             numero: 0,

@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import Citacoes from './components/Citacoes'
+import Citacoes from './components/citacoes'
 import Sobre from './components/Sobre'
 
 export default {
