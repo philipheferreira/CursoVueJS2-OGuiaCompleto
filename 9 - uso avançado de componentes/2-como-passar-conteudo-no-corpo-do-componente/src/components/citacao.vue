@@ -1,12 +1,13 @@
 <template>
     <div class="citacao">
-        
+        {{ texto }}
     </div>
 </template>
 
 <script>
 export default {
-    name:"citacaoComponent"
+    name:"citacaoComponent",
+    props: ['texto']
 }
 </script>
 

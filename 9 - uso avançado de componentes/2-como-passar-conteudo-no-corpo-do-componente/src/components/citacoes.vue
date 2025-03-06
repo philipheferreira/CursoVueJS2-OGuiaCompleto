@@ -4,35 +4,39 @@
             <button @click="numero--">&lt;</button>
             <button @click="numero++">&gt;</button>
         </span>
-        {{ numero }} {{ indice }} 
-        {{ citacoes[indice].texto }}
+        <Citacao :texto="citacoes[indice].textoLocal"></Citacao> <!-- Enviando os dados para o props do componente citacao receber -->
     </div>
 </template>
 
 <script>
+import Citacao from './citacao.vue' // importa componente citacao para o codigo
+
 export default {
     name: "citacoesComponent",
+    components: {
+         Citacao 
+        },
     data() {
         return {
             numero: 0,
             citacoes: [{
                 fonte: 'Jornal do Empreendedor',
-                texto: 'Lembre-se sempre que você é absolutamente único. Assim como todos os outros.',
+                textoLocal: 'Lembre-se sempre que você é absolutamente único. Assim como todos os outros.',
                 autor: 'Margaret Mead'
             }, { 
                 fonte: 'Frases de Mãe',
-                texto: 'Isso não é um quarto, é um chiqueiro.',
+                textoLocal: 'Isso não é um quarto, é um chiqueiro.',
                 autor: 'Roberta'
             }, {
                 fonte: 'Frases de Pai',
-                texto: 'Vou contar até 3! 1, 2, 2...',
+                textoLocal: 'Vou contar até 3! 1, 2, 2...',
                 autor: 'Gustavo'
             }]
         }
     },
     computed: {
         indice() {
-            return Math.abs(this.numero % 3)
+            return Math.abs(this.numero % 3) // Funcao indice retorna o numero. Toda vez que ele for igual a 3, zero o seu valor
         }
     }
 }
