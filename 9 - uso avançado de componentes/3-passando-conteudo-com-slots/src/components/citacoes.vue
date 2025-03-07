@@ -8,7 +8,7 @@
             <h1> {{ citacoes[indice].autor }} </h1>
             <p> {{ citacoes[indice].textoLocal }} </p>
             <h6> {{ citacoes[indice].autor }} </h6>
-        </Citacao> <!-- Enviando os dados para o props do componente citacao receber -->
+        </Citacao> <!-- Enviando os dados para o props do componente citacao receber.Ira funcionar porque no component citacao foi declarado o slot -->
     </div>
 </template>
 
