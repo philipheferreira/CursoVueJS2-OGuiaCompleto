@@ -52,4 +52,8 @@ export default {
         flex-direction: column;
         align-items: center;
     }
+
+    h1 {
+        color: green; /* Por mais que o componente chamado citacoes tem um h1 style proprio, ele será sobreescrito por esse*/
+    }
 </style>
