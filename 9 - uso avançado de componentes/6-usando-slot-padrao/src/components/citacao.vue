@@ -1,7 +1,7 @@
 <template>
     <div class="citacao">
         <slot name="autor"></slot>
-        <slot name="texto"></slot>
+        <slot></slot> <!-- Declarando um slot sem nome para receber a chamada do outro component -->
         <slot name="fonte"></slot>
     </div>
 </template>
