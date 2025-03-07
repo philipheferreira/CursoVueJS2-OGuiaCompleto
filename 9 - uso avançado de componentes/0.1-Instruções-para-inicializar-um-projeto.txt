@@ -1,0 +1,14 @@
+Para inicializar um projeto é bom se atentar com os comandos de CMD para começar o projeto. O primeiro comando é para verificar a versão caso esteja usando o nvm:
+* nvm ls
+
+Recomendado usar a versão a cima de 20. Para instalar é só usar o comando:
+* nvm install 20
+
+Depois disso é só usar o comando para utilizar: 
+* nvm use 20
+
+Em seguida tem que instalar o vue nessa versão do node do nvm que é a 20. Depois disso é só usar o comando de criar o projeto vue:
+* vue create nome-do-projeto (Não pode ter letras maiúsculas no nome do projeto e nem espaço)
+
+Em seguida é só inicializar o projeto: 
+* npm run serve
