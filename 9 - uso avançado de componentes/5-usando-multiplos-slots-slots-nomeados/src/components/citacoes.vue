@@ -1,3 +1,4 @@
+<!-- Nesse cenario irei criar diferentes slots que iram mostrar diferentes funcionalidades. No caso irei usar a propriedade slot agora no component que chama selecionando o tipo de slot que desejo utilizar -->
 <template>
     <div class="citacoes">
         <span>
@@ -5,9 +6,9 @@
             <button @click="numero++">&gt;</button>
         </span>
         <Citacao>
-            <h1> {{ citacoes[indice].autor }} </h1>
-            <p> {{ citacoes[indice].textoLocal }} </p>
-            <h6> {{ citacoes[indice].autor }} </h6>
+            <h1 slot="autor"> {{ citacoes[indice].autor }} </h1>
+            <p slot="texto"> {{ citacoes[indice].textoLocal }} </p>
+            <h6 slot="fonte"> {{ citacoes[indice].autor }} </h6>
         </Citacao>
     </div>
 </template>
@@ -40,7 +41,7 @@ export default {
     },
     computed: {
         indice() {
-            return Math.abs(this.numero % 3) // Funcao indice retorna o numero. Toda vez que ele for igual a 3, zero o seu valor
+            return Math.abs(this.numero % 3)
         }
     }
 }
