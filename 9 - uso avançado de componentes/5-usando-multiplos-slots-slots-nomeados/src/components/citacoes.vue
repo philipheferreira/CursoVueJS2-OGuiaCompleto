@@ -6,9 +6,9 @@
             <button @click="numero++">&gt;</button>
         </span>
         <Citacao>
-            <h1 slot="autor"> {{ citacoes[indice].autor }} </h1>
-            <p slot="texto"> {{ citacoes[indice].textoLocal }} </p>
-            <h6 slot="fonte"> {{ citacoes[indice].autor }} </h6>
+            <h1 slot="autor"> {{ citacoes[indice].autor }} </h1> <!-- Como tem um autor name=autor ele só gera um componente slot que recebe esse slot autor -->
+            <p slot="texto"> {{ citacoes[indice].textoLocal }} </p> <!-- Como tem um autor name=texto ele só gera um componente slot que recebe esse slot texto -->
+            <h6 slot="fonte"> {{ citacoes[indice].autor }} </h6> <!-- Como tem um autor name=fonte ele só gera um componente slot que recebe esse slot fonte -->
         </Citacao>
     </div>
 </template>
