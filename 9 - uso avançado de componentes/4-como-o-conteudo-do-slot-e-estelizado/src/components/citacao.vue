@@ -1,6 +1,6 @@
 <template>
     <div class="citacao">
-        <slot></slot> <!-- Comando exclusivo do Vue para exibir aquilo que foi passado dentro do corpo do componente em outros componentes que chamem ele. Slot recebe tudo que foi declarado em outro componente para ele receber -->
+        <slot></slot>
     </div>
 </template>
 
