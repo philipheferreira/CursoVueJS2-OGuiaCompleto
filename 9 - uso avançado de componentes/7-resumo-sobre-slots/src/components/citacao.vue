@@ -1,7 +1,9 @@
+<!-- Reiterando que slot é muito rico e pratico para as funcionalidades -->
+
 <template>
     <div class="citacao">
         <slot name="autor"></slot>
-        <slot></slot> <!-- Declarando um slot sem nome para receber a chamada do outro component -->
+        <slot></slot> 
         <slot name="fonte"></slot>
     </div>
 </template>

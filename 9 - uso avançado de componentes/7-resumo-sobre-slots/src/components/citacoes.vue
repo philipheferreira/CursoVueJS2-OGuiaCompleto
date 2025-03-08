@@ -1,5 +1,3 @@
-<!-- Nada imde de utilizar a chamada do slot padrão junto com os slots nomeados. A fim de fazer um tratamento melhor do component ou customizar a aplicação -->
-
 <template>
     <div class="citacoes">
         <span>
@@ -7,10 +5,10 @@
             <button @click="numero++">&gt;</button>
         </span>
         <Citacao>
-            <h1 slot="autor">Autor: </h1> <!-- entra no slot ator que foi nomeado, mesmo não passando ou solicitando nenhum parametro -->
-            <h1 slot="autor"> {{ citacoes[indice].autor }} </h1> <!-- -->
-            <p>Citação: </p> <!-- Não está chamando nenhum slot nomeado então entrara no slote padrão -->
-            <p> {{ citacoes[indice].textoLocal }} </p> <!-- Realizando uma declaração para o slot sem component -->
+            <h1 slot="autor">Autor: </h1> 
+            <h1 slot="autor"> {{ citacoes[indice].autor }} </h1> 
+            <p>Citação: </p> 
+            <p> {{ citacoes[indice].textoLocal }} </p> 
             <h6 slot="fonte">Fonte: </h6>
             <h6 slot="fonte"> {{ citacoes[indice].autor }} </h6> 
         </Citacao>
