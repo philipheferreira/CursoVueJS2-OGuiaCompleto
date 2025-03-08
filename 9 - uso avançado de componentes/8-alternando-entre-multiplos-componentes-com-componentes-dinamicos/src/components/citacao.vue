@@ -1,10 +1,9 @@
-<!-- Reiterando que slot é muito rico e pratico para as funcionalidades -->
 
 <template>
     <div class="citacao">
         <slot name="fonte"></slot>
         <slot></slot> 
-        <div class="autor"><slot name="autor"></slot></div> <!-- Criando uma class autor para modificar o slot nomeado autor -->
+        <div class="autor"><slot name="autor"></slot></div> 
     </div>
 </template>
 
@@ -22,7 +21,7 @@ export default {
         padding: 25px;
         max-width: 450px;
     }
-    .autor{ /* a class autor é afetada pelas modificações aqui geradas */
+    .autor{
         float: right;
     }
 </style>
