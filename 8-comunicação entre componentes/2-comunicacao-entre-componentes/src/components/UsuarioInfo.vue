@@ -4,7 +4,7 @@
 
         <h2>As informações de Usuário</h2>
         <p>Vários detalhes...</p>
-        <p>Nome do usuario: <strong></strong> </p>
+        <p>Nome do usuario: <strong> {{ nome }} </strong> </p>
 
     </div>
 
@@ -12,7 +12,6 @@
 
 
 <script>
-
     export default{
         name: 'usuarioInfo'
     }

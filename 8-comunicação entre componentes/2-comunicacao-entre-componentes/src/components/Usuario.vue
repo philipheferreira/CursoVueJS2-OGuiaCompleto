@@ -3,13 +3,12 @@
     <div class="container">
         <h1>Componente Usuário</h1>
         <p>Esse é um componente muito legal!</p>
+        <button @click="alterarNome"> Alterar Nome</button> <!-- Criar botão que Altera nome -->
+        <hr/>
         <div class="componentes">
-
             <app-usuario-info />
             <app-usuario-editar />
-
         </div>
-
     </div>
 
 
@@ -29,6 +28,11 @@ export default {
     data(){
         return {
             nome: "Pedro"
+        }
+    },
+    methods: {
+        alterarNome() { // Operação que altera variavel nome
+            this.nome = 'Ana'
         }
     }
 }
