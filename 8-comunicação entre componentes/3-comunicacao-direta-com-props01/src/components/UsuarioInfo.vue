@@ -15,7 +15,7 @@
 
     export default{
         name: 'usuarioInfo',
-        props: ['nome', 'nome1']
+        props: ['nome', 'nome1'] // Define a propriedade que será recebida pela props do outro component
     }
 
 </script>
