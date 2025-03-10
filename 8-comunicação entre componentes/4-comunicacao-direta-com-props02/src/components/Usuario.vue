@@ -3,16 +3,13 @@
     <div class="container">
         <h1>Componente Usuário</h1>
         <p>Esse é um componente muito legal!</p>
+        <button @click="alterarNome">Alterar Nome</button> <!-- O metodo ainda não consegue alterar a variavel -->
         <div class="componentes">
-
-            <app-usuario-info nome="Pedro" v-bind:nome1="nomeCompleto" />
+            <app-usuario-info nome="Pedro Silva" v-bind:nome1="nomeCompleto" :nome2="outroNomeCompleto" />
             <app-usuario-editar />
-
         </div>
-
     </div>
-
-
+    
 </template>
 
 
@@ -28,7 +25,14 @@ export default {
     },
     data(){
         return {
-            nomeCompleto: 'Philiphe Siqueira Ferreira'
+            nomeCompleto: 'Philiphe Siqueira Ferreira',
+            outroNomeCompleto: 'O guerreiro'
+        }
+    },
+    methods: {
+        alterarNome() {
+            this.nomeCompleto = 'Ana'
+            this.outroNomeCompleto = 'Outra Ana'
         }
     }
 }
