@@ -5,7 +5,10 @@
         <p>Esse é um componente muito legal!</p>
         <button @click="alterarNome">Alterar Nome</button> <!-- O metodo ainda não consegue alterar a variavel -->
         <div class="componentes">
-            <app-usuario-info nome="Pedro Silva" v-bind:nome1="nomeCompleto" /> <!-- A variavel nome usa comando estatico para passar as informações, com a variavel nomeCompleto ela foi criada no data e bindada para repassar as infos e ser recebida no outro componente -->
+            <app-usuario-info nome="Pedro Silva" v-bind:nome1="nomeCompleto" :nome2="outroNomeCompleto"/> <!-- 1- A variavel nome usa comando estatico para 
+            passar as informações. 
+            2 - A variavel nomeCompleto foi criada no data e bindada para repassar as infos e ser recebida no outro componente
+            3 - A variavel outroNomeCompleto foi criada no data e bindada para repassar as infos e ser recebida no outro componente usando atalho de chamada -->
             <app-usuario-editar />
         </div>
 
@@ -27,12 +30,14 @@ export default {
     },
     data(){
         return {
-            nomeCompleto: 'Philiphe Siqueira Ferreira'
+            nomeCompleto: 'Philiphe Siqueira Ferreira',
+            outroNomeCompleto: 'O guerreiro'
         }
     },
     methods: {
         alterarNome() { // Operação que altera variavel nome
-            this.nome = 'Ana'
+            this.nomeCompleto = 'Ana',
+            this.outroNomeCompleto = 'Outra Ana'
         }
     }
 }
