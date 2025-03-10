@@ -5,12 +5,9 @@
         <p>Esse é um componente muito legal!</p>
         <button v-on:click="alterarNome">Alterar nome</button>
         <div class="componentes">
-
-            <app-usuario-info nome="Pedro" v-bind:nome1="nomeCompleto" /> <!-- Comandos bindados que são variaveis são case sensitives -->
+            <app-usuario-info nome="Pedro Silva" v-bind:nome1="nomeCompleto" :nome2="outroNomeCompleto" /> <!-- Comandos bindados que são variaveis são case sensitives -->
             <app-usuario-editar />
-
         </div>
-
     </div>
 
 
@@ -29,12 +26,17 @@ export default {
     },
     data(){
         return {
-            nomeCompleto: 'Philiphe Siqueira Ferreira'
+            nomeCompleto: 'Philiphe Siqueira Ferreira',
+            outroNomeCompleto: 'O guerreiro'
         }
     },
-    alterarNome(){
+    methods: {
+        alterarNome(){
         this.nomeCompleto = "Ana Leticia Nascimento"
+        this.outroNomeCompleto = 'Outra Ana'
     }
+    }
+    
 }
 
 </script>
