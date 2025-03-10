@@ -6,7 +6,7 @@
         <button v-on:click="alterarNome">Alterar Nome</button>
         <div class="componentes">
 
-            <app-usuario-info nome="Pedro" v-bind:nome1="nomeCompleto" />
+            <app-usuario-info nome="Pedro Silva" v-bind:nome1="nomeCompleto" :nome2="outroNomeCompleto"/>
             <app-usuario-editar />
 
         </div>
@@ -29,12 +29,14 @@ export default {
     },
     data(){
         return {
-            nomeCompleto: 'Philiphe Siqueira Ferreira'
+            nomeCompleto: 'Philiphe Siqueira Ferreira',
+            outroNomeCompleto: 'O guerreiro'
         }
     },
     methods: {
         alterarNome(){
-            this.nomeCompleto = "Ana Leticia Filho"
+            this.nomeCompleto = "Ana Leticia Nascimento"
+            this.outroNomeCompleto = 'Outra Ana'
         }
     }
 }
