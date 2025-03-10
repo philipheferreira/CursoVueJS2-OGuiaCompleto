@@ -1,9 +1,11 @@
 <template>
 	<div id="app">
-		<span>
-			<button @click="componente = 'citacoes'">Citações</button>
-			<button @click="componente = 'sobre'">Sobre</button>
-		</span>
+    <keep-alive>
+      <span>
+			  <button @click="componente = 'citacoes'">Citações</button>
+			  <button @click="componente = 'sobre'">Sobre</button>
+		  </span>
+    </keep-alive>
 		<component :is="componente"/> 
 	</div>
 </template>

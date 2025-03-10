@@ -10,12 +10,9 @@
 <script>
 export default {
     name:"citacaoComponent",
-    /* Toda vez que citação é selecionada dentro de components no App.vue é gerado esse componente. 
-    O Created é a prova de que isso ocorre, pois ele é gerado toda vez que é chamado */
-    created(){ // referente ao ciclo de vida
+    created(){
         console.log('Component Citação criada')
     },
-    /* Assim como quando o se sai do component ele é destruido quando outro é chamado no lugar pelo component */
     destroyed(){
         console.log("Component Citação destroida")
     },
