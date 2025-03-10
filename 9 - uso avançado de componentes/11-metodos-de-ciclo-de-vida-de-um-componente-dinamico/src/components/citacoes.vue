@@ -26,6 +26,12 @@ export default {
     destroyed(){
         console.log("Component Citações destroida")
     },
+    activated() {
+        console.log("Component Citações ativada")
+    },
+    deactivated(){
+        console.log("Component Citações desativada")
+    },
     components: {
          Citacao 
         },

@@ -16,6 +16,12 @@ export default {
     destroyed(){
         console.log("Component Citação destroida")
     },
+    activated() {
+        console.log("Component Citação ativada")
+    },
+    deactivated(){
+        console.log("Component Citação desativada")
+    },
     props: ['texto']
 }
 </script>

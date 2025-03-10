@@ -13,7 +13,13 @@ export default {
     },
     destroyed(){
         console.log("Component sobre destroido")
-    }
+    },
+    activated() {
+        console.log("Component sobre ativada")
+    },
+    deactivated(){
+        console.log("Component sobre desativada")
+    },
 }
 </script>
 
