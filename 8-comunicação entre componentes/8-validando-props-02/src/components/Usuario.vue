@@ -3,22 +3,19 @@
     <div class="container">
         <h1>Componente Usuário</h1>
         <p>Esse é um componente muito legal!</p>
-        <button v-on:click="mudarNome">Mudar nome</button>
+        <button v-on:click="alterarNome">Alterar Nome</button>
         <div class="componentes">
-
-            <app-usuario-info :nome="nome" v-bind:nome1="nomeCompleto" /> <!-- Dentro de aspas ele vai interpretar como um string, se eu mandar true ou false será interpretado como boolean. Mandando numero ira como number -->
-            <app-usuario-info nome="1" v-bind:nome1="nomeCompleto" />
+            <app-usuario-info :nome="nome" v-bind:nome1="nomeCompleto" :nome2="outroNomeCompleto" /> <!-- Dentro de aspas ele vai interpretar como um string, se eu mandar true ou false será interpretado como boolean. Mandando numero ira como number -->
+            <app-usuario-info nome="1" v-bind:nome1="nomeCompleto" :nome2="outroNomeCompleto" />
             <app-usuario-editar />
-
         </div>
-
     </div>
-
 
 </template>
 
 
 <script>
+
 import AppUsuarioInfo from './UsuarioInfo.vue'
 import AppUsuarioEditar from './UsuarioEditar.vue'
 
@@ -31,18 +28,19 @@ export default {
     data(){
         return {
             nomeCompleto: 'Philiphe Siqueira Ferreira',
+            outroNomeCompleto: 'O guerreiro',
             nome: 'Pedro'
         }
     },
     methods: {
-        mudarNome(){
-            this.nome = "Ana"
+        alterarNome(){
+            this.nomeCompleto = "Ana Leticia Nascimento"
+            this.outroNomeCompleto = 'Outra Ana'
         }
     }
 }
 
 </script>
-
 
 <style scoped>
 

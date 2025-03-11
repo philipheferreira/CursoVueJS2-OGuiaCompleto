@@ -5,15 +5,11 @@
         <p>Esse é um componente muito legal!</p>
         <button v-on:click="alterarNome">Alterar Nome</button>
         <div class="componentes">
-
-            <app-usuario-info :nome="nome" v-bind:nome1="nomeCompleto" /> <!-- Dentro de aspas ele vai interpretar como um string, se eu mandar true ou false será interpretado como boolean. Mandando numero ira como number -->
-            <app-usuario-info nome="1" v-bind:nome1="nomeCompleto" />
+            <app-usuario-info :nome="nome" v-bind:nome1="nomeCompleto" :nome2="outroNomeCompleto" ></app-usuario-info> /> <!-- Dentro de aspas ele vai interpretar como um string, se eu mandar true ou false será interpretado como boolean. Mandando numero ira como number -->
+            <app-usuario-info nome="1" v-bind:nome1="nomeCompleto" :nome2="outroNomeCompleto" />
             <app-usuario-editar />
-
         </div>
-
     </div>
-
 
 </template>
 

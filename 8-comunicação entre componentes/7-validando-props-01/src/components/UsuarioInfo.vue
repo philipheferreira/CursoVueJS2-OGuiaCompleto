@@ -27,6 +27,10 @@
             nome1: {
                 type: String,
                 required: true
+            },
+            nome2: {
+                type: String,
+                required: true
             }
         },
         methods: {
