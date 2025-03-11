@@ -5,7 +5,7 @@
 			<form class="painel">
 				<div class="cabecalho">Formulário</div>
 				<Rotulo nome="E-mail">
-					<input type="text">
+					<input type="text" v-model="email"> <!-- V-model cria um two-databinding -->
 				</Rotulo>
 				<Rotulo nome="Senha">
 					<input type="password">
@@ -39,7 +39,7 @@
 			<div class="painel">
 				<div class="cabecalho">Resultado</div>
 				<Rotulo nome="E-mail">
-					<span>???</span>
+					<span> {{ email }} </span> <!-- Feita a interpolação -->
 				</Rotulo>
 				<Rotulo nome="Senha">
 					<span>???</span>
@@ -73,7 +73,17 @@ import Escolha from './components/Escolha.vue'
 
 export default {
 	name: 'app',
-	components: { Rotulo, Escolha }
+	components: { Rotulo, Escolha },
+  data(){
+    return {
+      email: '' // Criando uma variavel para linkar no formulario
+    }
+  },
+  created() { // mexe com o ciclo de vida da aplicação Vue
+    setTimeout(() => {
+        this.email = ''
+    }, 5000) // zera depois de 5s
+  }
 }
 </script>
 
