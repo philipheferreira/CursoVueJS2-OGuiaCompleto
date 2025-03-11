@@ -9,6 +9,7 @@
 
 <script>
 export default {
+    name: 'rotuloApp',
     props: ['nome']
 }
 </script>
