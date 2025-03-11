@@ -1,3 +1,5 @@
+<!-- Foco de agora são os modificadores de input -->
+
 <template>
 	<div id="app">
 		<h1>Registrar Reclamação</h1>
@@ -5,7 +7,7 @@
 			<form class="painel">
 				<div class="cabecalho">Formulário</div>
 				<Rotulo nome="E-mail">
-					<input type="text" v-model="usuario.email"> <!-- V-model cria um two-databinding -->
+					<input type="text" v-model.lazy="usuario.email"> <!-- Utilizar o modificador lazy significa que ele só vai atualizar os campos quando sair do campo input -->
 				</Rotulo>
 				<Rotulo nome="Senha">
 					<input type="password" v-model="usuario.senha">
