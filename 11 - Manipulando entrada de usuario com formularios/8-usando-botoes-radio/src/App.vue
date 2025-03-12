@@ -19,8 +19,8 @@
 					<textarea name="" cols="30" rows="5" v-model="mensagem"></textarea>
 				</Rotulo>
 				<Rotulo nome="Características do Problema">
-					<span class="mr-4"><input type="checkbox" v-model="caracteristicas" value="reproduzivel"> Reproduzível</span> <!-- toda vez que for selecionado o checkbox será adicionado no array caracteristicas o value desse checkbox, que é o reproduzivel -->
-					<span><input type="checkbox" v-model="caracteristicas" value="intermitente"> Intermitente</span> <!-- toda vez que for selecionado o checkbox será adicionado no array caracteristicas o value desse checkbox, que é o itermitente -->
+					<span class="mr-4"><input type="checkbox" v-model="caracteristicas" value="reproduzivel"> Reproduzível</span>
+					<span><input type="checkbox" v-model="caracteristicas" value="intermitente"> Intermitente</span> 
 				</Rotulo>
 				<Rotulo nome="Qual produto?">
 					<span class="mr-4"><input type="radio"> Web</span>
@@ -55,7 +55,7 @@
 				<Rotulo nome="Marque as Opções">
 					<span>
 						<ul>
-							<li v-for="c in caracteristicas" :key="c"> {{ c }} </li> <!-- Criado campo para visualizar as opções -->
+							<li v-for="c in caracteristicas" :key="c"> {{ c }} </li>
 						</ul>
 					</span>
 				</Rotulo>
