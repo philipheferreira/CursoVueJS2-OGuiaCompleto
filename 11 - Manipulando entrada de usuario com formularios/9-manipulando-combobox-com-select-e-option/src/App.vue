@@ -1,5 +1,3 @@
-<!-- Foco de agora são os modificadores de input -->
-
 <template>
 	<div id="app">
 		<h1>Registrar Reclamação</h1>
@@ -23,9 +21,9 @@
 					<span><input type="checkbox" v-model="caracteristicas" value="intermitente"> Intermitente</span> 
 				</Rotulo>
 				<Rotulo nome="Qual produto?">
-					<span class="mr-4"><input type="radio" value="web" v-model="produto"> Web</span> <!-- Feito um v-model para repassar o valor. Radio é excludente então por mais que tenha mais de uma opção sempre será colocada só uma depois que selecionar outra que aponte para a mesma variavel -->
-					<span class="mr-4"><input type="radio" value="mobile" v-model="produto"> Mobile</span> <!-- Aponta para a mesma variavel que a web -->
-					<span><input type="radio" value="outro" v-model="produto"> Outro</span> <!-- Aponta para a mesma variavel que a web -->
+					<span class="mr-4"><input type="radio" value="web" v-model="produto"> Web</span>
+					<span class="mr-4"><input type="radio" value="mobile" v-model="produto"> Mobile</span>
+					<span><input type="radio" value="outro" v-model="produto"> Outro</span>
 				</Rotulo>
 				<Rotulo nome="Prioridade">
 					<select name="" id="">
@@ -89,7 +87,7 @@ export default {
     return {
 		mensagem: '', 
 		caracteristicas: [],
-      produto: 'web', // String responsavel por armazenar radios. Como ela tem o valor web inicialmente ela já começa com o valor web pre-estartado
+      produto: 'web',
         usuario: {
           email: '',
           senha: '',
