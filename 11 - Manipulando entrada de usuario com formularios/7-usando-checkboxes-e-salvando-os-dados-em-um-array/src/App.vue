@@ -55,7 +55,7 @@
 				<Rotulo nome="Marque as Opções">
 					<span>
 						<ul>
-							<li v-for="c in caracteristicas" :key="c"> {{ c }} </li>
+							<li v-for="c in caracteristicas" :key="c"> {{ c }} </li> <!-- Criado campo para visualizar as opções -->
 						</ul>
 					</span>
 				</Rotulo>
