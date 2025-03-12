@@ -7,20 +7,20 @@
 			<form class="painel">
 				<div class="cabecalho">Formulário</div>
 				<Rotulo nome="E-mail">
-					<input type="text" v-model.trim="usuario.email"> <!-- Modificador trim que tira os espaços em branco antes e depois do nome digitado -->
+					<input type="text" v-model.trim="usuario.email">
 				</Rotulo>
 				<Rotulo nome="Senha">
-					<input type="password" v-model.lazy="usuario.senha"> <!-- Utilizar o modificador lazy significa que ele só vai atualizar os campos quando sair do campo input -->
+					<input type="password" v-model.lazy="usuario.senha">
 				</Rotulo>
 				<Rotulo nome="Idade">
-					<input type="number" v-model.number="usuario.idade"> <!-- Converte a string gerada em um valor numerico normal -->
+					<input type="number" v-model.number="usuario.idade"> 
 				</Rotulo>
 				<Rotulo nome="Mensagem">
 					<textarea name="" cols="30" rows="5" v-model="mensagem"></textarea>
 				</Rotulo>
 				<Rotulo nome="Características do Problema">
-					<span class="mr-4"><input type="checkbox" value="reproduzivel"> Reproduzível</span>
-					<span><input type="checkbox" value="intermitente"> Intermitente</span>
+					<span class="mr-4"><input type="checkbox" v-model="caracteristicas" value="reproduzivel"> Reproduzível</span> <!-- toda vez que for selecionado o checkbox será adicionado no array caracteristicas o value desse checkbox, que é o reproduzivel -->
+					<span><input type="checkbox" v-model="caracteristicas" value="intermitente"> Intermitente</span> <!-- toda vez que for selecionado o checkbox será adicionado no array caracteristicas o value desse checkbox, que é o itermitente -->
 				</Rotulo>
 				<Rotulo nome="Qual produto?">
 					<span class="mr-4"><input type="radio"> Web</span>
@@ -41,19 +41,23 @@
 			<div class="painel">
 				<div class="cabecalho">Resultado</div>
 				<Rotulo nome="E-mail">
-					<span> {{ usuario.email }} </span> <!-- Feita a interpolação -->
+					<span> {{ usuario.email }} </span>
 				</Rotulo>
 				<Rotulo nome="Senha">
-					<span> {{ usuario.senha }} </span> <!-- Feita a interpolação -->
+					<span> {{ usuario.senha }} </span> 
 				</Rotulo>
 				<Rotulo nome="Idade">
-					<span> {{ usuario.idade }} </span> <!-- Feita a interpolação -->
+					<span> {{ usuario.idade }} </span>
 				</Rotulo>
 				<Rotulo nome="Mensagem">
 					<span> {{ mensagem }} </span>
 				</Rotulo>
 				<Rotulo nome="Marque as Opções">
-					<span>???</span>
+					<span>
+						<ul>
+							<li v-for="c in caracteristicas" :key="c"> {{ c }} </li>
+						</ul>
+					</span>
 				</Rotulo>
 				<Rotulo nome="Qual produto?">
 					<span>???</span>
@@ -83,20 +87,21 @@ export default {
 	},
 	data(){
     return {
-			mensagem: '', // variavel mensagem criada para usar no textarea
-      usuario: {
-        email: '',
-        senha: '',
-        idade: 25
+		mensagem: '', 
+		caracteristicas: [], // criado para validar o checkbox. É um array
+        usuario: {
+          email: '',
+          senha: '',
+          idade: 25
+        }
       }
-    }
-  },
-  created() { // mexe com o ciclo de vida da aplicação Vue
-    setTimeout(() => {
+    },
+    created() {
+      setTimeout(() => {
         this.email = ''
-    }, 5000) // zera depois de 5s
+      }, 5000)
+    }
   }
-}
 </script>
 
 <style>
