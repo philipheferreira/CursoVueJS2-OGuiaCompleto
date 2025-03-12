@@ -23,9 +23,9 @@
 					<span><input type="checkbox" v-model="caracteristicas" value="intermitente"> Intermitente</span> 
 				</Rotulo>
 				<Rotulo nome="Qual produto?">
-					<span class="mr-4"><input type="radio"> Web</span>
-					<span class="mr-4"><input type="radio"> Mobile</span>
-					<span><input type="radio"> Outro</span>
+					<span class="mr-4"><input type="radio" value="web" v-model="produto"> Web</span> <!-- Feito um v-model para repassar o valor. Radio é excludente então por mais que tenha mais de uma opção sempre será colocada só uma depois que selecionar outra que aponte para a mesma variavel -->
+					<span class="mr-4"><input type="radio" value="mobile" v-model="produto"> Mobile</span> <!-- Aponta para a mesma variavel que a web -->
+					<span><input type="radio" value="outro" v-model="produto"> Outro</span> <!-- Aponta para a mesma variavel que a web -->
 				</Rotulo>
 				<Rotulo nome="Prioridade">
 					<select name="" id="">
@@ -60,7 +60,7 @@
 					</span>
 				</Rotulo>
 				<Rotulo nome="Qual produto?">
-					<span>???</span>
+					<span> {{ produto }} </span>
 				</Rotulo>
 				<Rotulo nome="Prioridade">
 					<span>???</span>
@@ -88,7 +88,8 @@ export default {
 	data(){
     return {
 		mensagem: '', 
-		caracteristicas: [], // criado para validar o checkbox. É um array
+		caracteristicas: [],
+      produto: 'web', // String responsavel por armazenar radios. Como ela tem o valor web inicialmente ela já começa com o valor web pre-estartado
         usuario: {
           email: '',
           senha: '',
