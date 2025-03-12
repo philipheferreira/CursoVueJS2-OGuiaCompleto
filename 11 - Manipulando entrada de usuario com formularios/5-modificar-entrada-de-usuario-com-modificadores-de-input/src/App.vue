@@ -7,13 +7,14 @@
 			<form class="painel">
 				<div class="cabecalho">Formulário</div>
 				<Rotulo nome="E-mail">
-					<input type="text" v-model.lazy="usuario.email"> <!-- Utilizar o modificador lazy significa que ele só vai atualizar os campos quando sair do campo input -->
+					<input type="text" v-model.trim="usuario.email"> <!-- Modificador trim que tira os espaços em branco antes e depois do nome digitado -->
 				</Rotulo>
 				<Rotulo nome="Senha">
-					<input type="password" v-model="usuario.senha">
+					<input type="password" v-model.lazy="usuario.senha"> <!-- Utilizar o modificador lazy significa que ele só vai atualizar os campos quando sair do campo input -->
 				</Rotulo>
 				<Rotulo nome="Idade">
-					<input type="number" v-model="usuario.idade">
+					<input type="number" v-model.number="usuario.idade"> <!-- Converte a string gerada em um valor numerico normal -->
+					<!-- Para confirmar é só passar o comando document.querySeelector('input[type="number"]').value no console -->
 				</Rotulo>
 				<Rotulo nome="Mensagem">
 					<textarea name="" cols="30" rows="5"></textarea>
@@ -44,10 +45,10 @@
 					<span> {{ usuario.email }} </span> <!-- Feita a interpolação -->
 				</Rotulo>
 				<Rotulo nome="Senha">
-					<span> {{ usuario.senha }} </span>
+					<span> {{ usuario.senha }} </span> <!-- Feita a interpolação -->
 				</Rotulo>
 				<Rotulo nome="Idade">
-					<span> {{ usuario.idade }} </span>
+					<span> {{ usuario.idade }} </span> <!-- Feita a interpolação -->
 				</Rotulo>
 				<Rotulo nome="Mensagem">
 					<span>???</span>
@@ -76,14 +77,19 @@ import Escolha from './components/Escolha.vue'
 export default {
 	name: 'app',
 	components: { Rotulo, Escolha },
-  data(){
-    return {
-      email: '', // Criando uma variavel para linkar no formulario
-      usuario: {
-        email: '',
-        senha: '',
-        idade: 25
-      }
+  	computed: {
+		tipo() {
+			return typeof this.usuario.idade
+		}
+	},
+	data(){
+    	return {
+      		email: '', // Criando uma variavel para linkar no formulario
+      		usuario: {
+        	email: '',
+        	senha: '',
+        	idade: 25
+      	}
     }
   },
   created() { // mexe com o ciclo de vida da aplicação Vue

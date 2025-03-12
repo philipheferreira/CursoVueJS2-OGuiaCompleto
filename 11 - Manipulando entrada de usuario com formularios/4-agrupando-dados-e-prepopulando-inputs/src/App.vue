@@ -8,10 +8,10 @@
 					<input type="text" v-model="usuario.email"> <!-- V-model cria um two-databinding -->
 				</Rotulo>
 				<Rotulo nome="Senha">
-					<input type="password" v-model="usuario.senha">
+					<input type="password" v-model="usuario.senha"> <!-- V-model cria um two-databinding -->
 				</Rotulo>
 				<Rotulo nome="Idade">
-					<input type="number" v-model="usuario.idade">
+					<input type="number" v-model="usuario.idade"> <!-- V-model cria um two-databinding -->
 				</Rotulo>
 				<Rotulo nome="Mensagem">
 					<textarea name="" cols="30" rows="5"></textarea>
