@@ -76,19 +76,19 @@ import Escolha from './components/Escolha.vue'
 export default {
 	name: 'app',
 	components: { Rotulo, Escolha },
-  	computed: {
-		tipo() {
-			return typeof this.usuario.idade
-		}
+  computed: {
+	tipo() {
+		return typeof this.usuario.idade
+	}
 	},
 	data(){
-    	return {
+    return {
 			mensagem: '', // variavel mensagem criada para usar no textarea
-      		usuario: {
-        	email: '',
-        	senha: '',
-        	idade: 25
-      	}
+      usuario: {
+        email: '',
+        senha: '',
+        idade: 25
+      }
     }
   },
   created() { // mexe com o ciclo de vida da aplicação Vue
