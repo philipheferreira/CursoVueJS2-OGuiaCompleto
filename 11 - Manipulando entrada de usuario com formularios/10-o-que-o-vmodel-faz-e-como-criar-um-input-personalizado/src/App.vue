@@ -26,11 +26,9 @@
 					<span><input type="radio" value="outro" v-model="produto"> Outro</span>
 				</Rotulo>
 				<Rotulo nome="Prioridade">
-					<select v-model="prioridade"> <!-- É criado um valor prioridade para receber o value dentro de propriedades-->
-						<option v-for="prioridade in prioridades" :value="prioridade.codigo" :key="prioridade.codigo" :selected="prioridade.codigo === 1"> <!-- v-for ira percorrer 
-              cada um dos objetos criados em prioridades e ira repassar o propriedade.codigo no value. O comando :selected pré seleciona um valor para aparecer no select, nesse
-              caso sera bindado o item que o codigo é 1 dentro do objeto propriedade -->
-              {{ prioridade.nome }} <!-- Ira mostrar para o usuario o nome nas opções do select -->
+					<select v-model="prioridade">
+						<option v-for="prioridade in prioridades" :value="prioridade.codigo" :key="prioridade.codigo" :selected="prioridade.codigo === 1">
+              {{ prioridade.nome }} 
             </option>
 					</select>
 				</Rotulo>
@@ -86,7 +84,7 @@ export default {
 	tipo() {
 		return typeof this.usuario.idade
 	},
-  tipoPioridade(){ // verificar o tipo da prioridade
+  tipoPioridade(){
     return typeof this.prioridade
   }
 	},
@@ -101,7 +99,7 @@ export default {
         { codigo: 2, nome: 'Moderada'},
         { codigo: 3, nome: 'Alta' }
 
-      ], // criado com o objetivo de ser usado no select
+      ],
         usuario: {
           email: '',
           senha: '',
