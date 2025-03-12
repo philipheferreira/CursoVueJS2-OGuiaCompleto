@@ -33,7 +33,11 @@
 					</select>
 				</Rotulo>
 				<Rotulo nome="Primeira Reclamação?">
-          <input type="text" v-model="temp" >
+          <input type="text" :value="temp" @input="temp = $event.target.value"> <!-- Utilizando o value bindando ela com a variavel temp 
+          o que estiver dentro dela será mostrado dentro do input.
+          O comando @input ira fazer com que as modificações dentro do evento input sejam atualizados dentro da variavel declarada input.
+          Logo é como se eu dissesse que as modificações feitas dentro do input olhassem dentro dela mesma e repassassem para o temp, que
+          está sendo mostrado dentro do input no value bindado -->
 					<Escolha />
 				</Rotulo>
 				<hr>
@@ -106,7 +110,7 @@ export default {
           senha: '',
           idade: 25
         },
-        temp: '' // valor criado para usar no input de reclamações
+        temp: 'teste' // valor criado para usar no input de reclamações
       }
     },
     created() {
