@@ -1,15 +1,20 @@
 <template>
     <div class="escolha"
-        @click="ligado = !ligado"
-        :class="{ligado, desligado: !ligado}">
-        <div v-if="ligado" class="botao"></div>
-        <div v-else class="botao"></div>
+        @click="$emit('input', !valor)"
+        :class="{ligado: valor, desligado: !valor}">
+        <div class="botao"></div>
     </div>
 </template>
 
 <script>
 export default {
     name: 'escolhaApp',
+    props: {
+        valor: {
+            type: Boolean,
+            required: true
+        }
+    },
     data() {
         return {
             ligado: false

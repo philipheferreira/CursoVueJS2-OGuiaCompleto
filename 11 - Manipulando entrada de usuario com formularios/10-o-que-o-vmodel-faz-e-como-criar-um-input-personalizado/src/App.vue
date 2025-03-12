@@ -38,8 +38,10 @@
           O comando @input ira fazer com que as modificações dentro do evento input sejam atualizados dentro da variavel declarada input.
           Logo é como se eu dissesse que as modificações feitas dentro do input olhassem dentro dela mesma e repassassem para o temp, que
           está sendo mostrado dentro do input no value bindado -->
-					<Escolha />
 				</Rotulo>
+        <Rotulo nome="Primeira Reclamação?">
+          <Escolha v-model="escolha" />  <!-- Component criado que recebe variavel escolha -->
+        </Rotulo>
 				<hr>
 				<button>Enviar</button>
 			</form>
@@ -72,6 +74,9 @@
 				</Rotulo>
 				<Rotulo nome="Temp">
 					<span> {{ temp }} </span>
+				</Rotulo>
+        <Rotulo nome="Primeira Reclamação?">
+					<span> {{ escolha }} </span>
 				</Rotulo>
 			</div>
 		</div>
@@ -110,7 +115,8 @@ export default {
           senha: '',
           idade: 25
         },
-        temp: 'teste' // valor criado para usar no input de reclamações
+        temp: 'teste', // valor criado para usar no input de reclamações
+        escolha: true
       }
     },
     created() {
