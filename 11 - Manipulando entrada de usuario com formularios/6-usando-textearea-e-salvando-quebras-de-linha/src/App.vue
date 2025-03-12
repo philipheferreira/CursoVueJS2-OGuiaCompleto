@@ -14,10 +14,9 @@
 				</Rotulo>
 				<Rotulo nome="Idade">
 					<input type="number" v-model.number="usuario.idade"> <!-- Converte a string gerada em um valor numerico normal -->
-					<!-- Para confirmar é só passar o comando document.querySeelector('input[type="number"]').value no console -->
 				</Rotulo>
 				<Rotulo nome="Mensagem">
-					<textarea name="" cols="30" rows="5"></textarea>
+					<textarea name="" cols="30" rows="5" v-model="mensagem"></textarea>
 				</Rotulo>
 				<Rotulo nome="Características do Problema">
 					<span class="mr-4"><input type="checkbox" value="reproduzivel"> Reproduzível</span>
@@ -51,7 +50,7 @@
 					<span> {{ usuario.idade }} </span> <!-- Feita a interpolação -->
 				</Rotulo>
 				<Rotulo nome="Mensagem">
-					<span>???</span>
+					<span> {{ mensagem }} </span>
 				</Rotulo>
 				<Rotulo nome="Marque as Opções">
 					<span>???</span>
@@ -84,7 +83,7 @@ export default {
 	},
 	data(){
     	return {
-      		email: '', // Criando uma variavel para linkar no formulario
+			mensagem: '', // variavel mensagem criada para usar no textarea
       		usuario: {
         	email: '',
         	senha: '',
