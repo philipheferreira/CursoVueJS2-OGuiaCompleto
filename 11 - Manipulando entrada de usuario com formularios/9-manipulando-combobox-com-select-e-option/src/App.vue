@@ -26,8 +26,10 @@
 					<span><input type="radio" value="outro" v-model="produto"> Outro</span>
 				</Rotulo>
 				<Rotulo nome="Prioridade">
-					<select name="" id="">
-						<option></option>
+					<select >
+						<option v-for="prioridade in prioridades" :value="prioridade.codigo" :key="prioridade.codigo"> <!-- v-for ira percorrer cada um dos objetos criados em prioridades e ira repassar o propriedade.codigo no value -->
+              {{ prioridade.nome }} <!-- Ira mostrar para o usuario o nome nas opções do select -->
+            </option>
 					</select>
 				</Rotulo>
 				<Rotulo nome="Primeira Reclamação?">
@@ -88,6 +90,12 @@ export default {
 		mensagem: '', 
 		caracteristicas: [],
       produto: 'web',
+      prioridades: [
+        { codigo: 1, nome: 'Baixa'},
+        { codigo: 2, nome: 'Moderada'},
+        { codigo: 3, nome: 'Alta' }
+
+      ], // criado com o objetivo de ser usado no select
         usuario: {
           email: '',
           senha: '',
