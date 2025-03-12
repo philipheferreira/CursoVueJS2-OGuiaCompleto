@@ -33,6 +33,7 @@
 					</select>
 				</Rotulo>
 				<Rotulo nome="Primeira Reclamação?">
+          <input type="text" v-model="temp" >
 					<Escolha />
 				</Rotulo>
 				<hr>
@@ -65,8 +66,8 @@
 				<Rotulo nome="Prioridade">
 					<span> {{ prioridade }} {{ tipoPioridade }} </span>
 				</Rotulo>
-				<Rotulo nome="Primeira Reclamação?">
-					<span>???</span>
+				<Rotulo nome="Temp">
+					<span> {{ temp }} </span>
 				</Rotulo>
 			</div>
 		</div>
@@ -104,7 +105,8 @@ export default {
           email: '',
           senha: '',
           idade: 25
-        }
+        },
+        temp: '' // valor criado para usar no input de reclamações
       }
     },
     created() {
