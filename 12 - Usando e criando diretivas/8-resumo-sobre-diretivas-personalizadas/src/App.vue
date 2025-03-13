@@ -1,4 +1,4 @@
-
+<!-- Reinterando que essa é a anatomia => v-nome:argumento.mod1.mod2="..." -->
 <template>
 	<div id="app">
 		<h1>Diretivas</h1>
