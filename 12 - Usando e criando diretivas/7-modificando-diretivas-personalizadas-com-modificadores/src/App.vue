@@ -6,9 +6,10 @@
     <p v-text="'Usando diretiva para v-text'"></p>
     <p v-html="'Usando diretiva <strong> V-html </strong>'"></p>
     <hr>
-    <p v-destaque="'red'">Usando diretiva personalizada</p>
-    <p v-destaque="cor">Usando diretiva personalizada</p>
-    <p v-destaque:fundo="cor">Usando diretiva personalizada</p>
+    <p v-destaque="'red'">Usando diretiva personalizada</p> <!-- referente a aula 4 -->
+    <p v-destaque="cor">Usando diretiva personalizada</p> <!-- referente a aula 5 -->
+    <p v-destaque:fundo="cor">Usando diretiva personalizada</p> <!-- Referente a aula 6 -->
+    <p v-destaque:fundo="cor">Usando diretiva personalizada com modificador</p> <!-- Com o modificador para atrasar a inicialização -->
 	</div>
 </template>
 
