@@ -1,3 +1,8 @@
+<!-- Exemplo de organização de uma diretiva, no caso sua anatomia:
+  v-teste:argumento.mod1.mod2.mod3="'valor'"
+
+-->
+
 <template>
 	<div id="app">
 		<h1>Diretivas</h1>
@@ -7,6 +12,7 @@
     <hr>
     <p v-destaque="'red'">Usando diretiva personalizada</p>
     <p v-destaque="cor">Usando diretiva personalizada</p>
+    <p v-destaque:fundo="cor">Usando diretiva personalizada</p> <!-- Usando um argumento dentro da diretiva para selecionar a opção mais viavel na chamada -->
 	</div>
 </template>
 
@@ -16,7 +22,8 @@ export default {
   name: 'App',
   data(){
     return{
-      cor: 'blue'
+      cor: 'blue',
+      cor2: 'green'
     }
   }
 }
