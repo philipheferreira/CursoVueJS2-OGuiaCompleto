@@ -5,7 +5,7 @@ Vue.config.productionTip = false
 
 Vue.directive('destaque', {
 
-})
+}) // para poder criar diretivas proprias globalmente
 
 new Vue({
   render: h => h(App),
