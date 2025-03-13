@@ -5,8 +5,8 @@
     <p v-text="'Usando diretiva para v-text'"></p>
     <p v-html="'Usando diretiva <strong> V-html </strong>'"></p>
     <hr>
-    <p v-destaque="'red'">Usando diretiva personalizada</p>
-    <p v-destaque="cor">Usando diretiva personalizada</p>
+    <p v-destaque="'red'">Usando diretiva personalizada</p> <!-- Chamada da diretiva criada -->
+    <p v-destaque="cor">Usando diretiva personalizada</p> <!-- O v-destaque está reutilizando uma variavel declarado dentro do data return -->
 	</div>
 </template>
 
@@ -16,7 +16,7 @@ export default {
   name: 'App',
   data(){
     return{
-      cor: 'blue'
+      cor: 'blue' /* Variavel declarada para realizar o repasse pelo binding declarado na chamada da diretiva */
     }
   }
 }
