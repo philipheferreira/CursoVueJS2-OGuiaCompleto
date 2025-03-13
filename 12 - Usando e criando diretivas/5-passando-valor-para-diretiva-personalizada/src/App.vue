@@ -1,13 +1,24 @@
 <template>
-  <div id="app">
-  </div>
+	<div id="app">
+		<h1>Diretivas</h1>
+    <hr/>
+    <p v-text="'Usando diretiva para v-text'"></p>
+    <p v-html="'Usando diretiva <strong> V-html </strong>'"></p>
+    <hr>
+    <p v-destaque="'red'">Usando diretiva personalizada</p>
+    <p v-destaque="cor">Usando diretiva personalizada</p>
+	</div>
 </template>
 
 <script>
 
 export default {
   name: 'App',
-  components: {}
+  data(){
+    return{
+      cor: 'blue'
+    }
+  }
 }
 </script>
 
