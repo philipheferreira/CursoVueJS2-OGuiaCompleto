@@ -13,7 +13,7 @@
     <h1>Diretivas Registradas Localmente</h1>
 
     <p v-destaque-local:fundo.atrasar="'lightblue'">Usando diretiva personalizada localmente</p>
-    <p v-destaque-local.atrsar="cor">Usando diretiva personalizada localmente</p>
+    <p v-destaque-local.atrasar.alternar="cor">Usando diretiva personalizada localmente</p>
 
 	</div>
 </template>
@@ -35,8 +35,21 @@ export default {
             }
           let atraso = 0
           if(binding.modifiers['atrasar']) atraso = 3000
+          
+          const cor1 = binding.value
+          const cor2 = 'purple'
+          let corAtual = cor1
 
           setTimeout(() => {
+            if(binding.modifiers['alternar']){
+              setInterval(() => {
+                corAtual = corAtual === cor1 ? cor2 : cor1 // Se o cor atual for igual a cor1 aplica a cor 2, se não for aplica a cor 1
+                aplicarCor(corAtual)
+              }, 1000)
+            } else {
+              aplicarCor(binding.value)
+            }
+
             aplicarCor(binding.value)
           }, atraso)
         }
