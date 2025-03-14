@@ -8,7 +8,7 @@
     <p v-destaque="'red'">Usando diretiva personalizada</p> <!-- referente a aula 4 -->
     <p v-destaque="cor">Usando diretiva personalizada</p> <!-- referente a aula 5 -->
     <p v-destaque:fundo="cor">Usando diretiva personalizada</p> <!-- Referente a aula 6 -->
-    <p v-destaque:fundo.atrasar="cor">Usando diretiva personalizada com modificador</p> <!-- Referente a aula 7 -->
+    <p v-destaque:fundo.atrasar="cor">Usando diretiva personalizada com modificador</p> <!-- Referente a aula 7 e a de agora-->
 
     <h1>Diretivas Registradas Localmente</h1>
 
@@ -43,7 +43,7 @@ export default {
           setTimeout(() => {
             if(binding.modifiers['alternar']){
               setInterval(() => {
-                corAtual = corAtual === cor1 ? cor2 : cor1 // Se o cor atual for igual a cor1 aplica a cor 2, se não for aplica a cor 1
+                corAtual = corAtual === cor1 ? cor2 : cor1
                 aplicarCor(corAtual)
               }, 1000)
             } else {
