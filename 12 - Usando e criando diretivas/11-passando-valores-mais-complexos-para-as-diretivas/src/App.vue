@@ -12,8 +12,8 @@
 
     <h1>Diretivas Registradas Localmente</h1>
 
-    <p v-destaque-local:fundo.atrasar="'lightblue'">Usando diretiva personalizada localmente</p>
-    <p v-destaque-local.atrasar.alternar="cor">Usando diretiva personalizada localmente</p>
+    <p v-destaque-local:fundo.atrasar="{cor1: 'green', atraso: 2000}">Usando diretiva personalizada localmente</p> <!-- Declarando um objeto com parametros para serem passados -->
+    <p v-destaque-local.atrasar.alternar="{cor1: 'green', cor2: 'red', atraso: 2000, intervalo: 200}">Usando diretiva personalizada localmente</p> <!-- Declarando um objeto com parametros para serem passados -->
 
 	</div>
 </template>
@@ -36,8 +36,8 @@ export default {
           let atraso = 0
           if(binding.modifiers['atrasar']) atraso = 3000
           
-          const cor1 = binding.value
-          const cor2 = 'purple'
+          const cor1 = binding.value.cor1 // Alterar o valor pra receber o que está sendo passado no objeto declarado a cima do value cor1
+          const cor2 = binding.value.cor2 // Alterar o valor pra receber o que está sendo passado no objeto declarado a cima do value cor2
           let corAtual = cor1
 
           setTimeout(() => {
@@ -45,12 +45,10 @@ export default {
               setInterval(() => {
                 corAtual = corAtual === cor1 ? cor2 : cor1
                 aplicarCor(corAtual)
-              }, 1000)
+              }, binding.value.intervalo) //Alterando para definir o intervalo que vai ser recebido
             } else {
-              aplicarCor(binding.value)
+              aplicarCor(binding.value.cor1) //Receber a cor 1
             }
-
-            aplicarCor(binding.value)
           }, atraso)
         }
       }
