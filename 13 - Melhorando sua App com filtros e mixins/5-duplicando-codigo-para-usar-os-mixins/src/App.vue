@@ -14,12 +14,17 @@
     <input type="text" :value="cpfAluno | inverter ">
     <br />
     <input type="text" :value="cpfAluno | acaoCPF | inverter">
-
+    <hr/>
+    <hr/>
+    <Frutas/>
 	</div>
 </template>
 
 <script>
+import Frutas from './components/Frutas.vue'
+
 export default {
+  components: { Frutas },
   filters: {
     acaoCPF(valor){ 
       const arr = valor.split('')
