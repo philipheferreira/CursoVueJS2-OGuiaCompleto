@@ -8,7 +8,7 @@
     <p v-destaque="'red'">Usando diretiva personalizada</p> <!-- referente a aula 4 -->
     <p v-destaque="cor">Usando diretiva personalizada</p> <!-- referente a aula 5 -->
     <p v-destaque:fundo="cor">Usando diretiva personalizada</p> <!-- Referente a aula 6 -->
-    <p v-destaque:fundo="cor">Usando diretiva personalizada com modificador</p> <!-- Referente a aula 7 -->
+    <p v-destaque:fundo.atrasar="cor">Usando diretiva personalizada com modificador</p> <!-- Referente a aula 7 -->
 
     <h1>Diretivas Registradas Localmente</h1>
 
@@ -26,16 +26,18 @@ export default {
   directives: {
       'destaque-local': {
         bind(el, binding){
-
+            const aplicarCor = cor => {
+              if(binding.arg === 'fundo'){
+              el.style.backgroundColor = cor
+            }else{
+              el.style.color = cor
+            }
+            }
           let atraso = 0
           if(binding.modifiers['atrasar']) atraso = 3000
 
           setTimeout(() => {
-            if(binding.arg === 'fundo'){
-              el.style.backgroundColor = binding.value
-            }else{
-              el.style.color = binding.value
-            }
+            aplicarCor(binding.value)
           }, atraso)
         }
       }
