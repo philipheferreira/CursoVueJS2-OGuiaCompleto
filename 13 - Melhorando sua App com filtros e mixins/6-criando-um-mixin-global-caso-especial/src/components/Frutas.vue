@@ -8,20 +8,14 @@
 </template>
 
 <script>
+import frutasMixin from '../frutasMixin'; // adicionando o mixin tudo que é aplicado nele é automaticamente repassado para esse componente
     export default {
         name: 'frutasComponent',
         data() {
-            return{
-                fruta: '',
-                frutas: ['banana', 'maça', 'laranja'] // Lista generica
-            }
+            return{}
         },
-        methods: {
-            add() {
-                this.frutas.push(this.fruta) // Metodo para adicionar fruta
-                this.fruta = '' // limpa depois de adicionar
-            }
-        }
+        methods: {},
+        mixins: [frutasMixin]
     }
 </script>
 

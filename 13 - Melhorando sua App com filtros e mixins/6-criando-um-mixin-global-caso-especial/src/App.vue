@@ -17,8 +17,10 @@
     <input type="text" :value="cpfAluno | acaoCPF | inverter">
     <hr/>
     <hr/>
+    <h3> Componente sendo chamado de lista </h3>
     <Frutas/>
     <hr/>
+    <h4> Mixin sendo chamado </h4>
     <div> <!-- lista replicada localmente -->
         <ul>
             <li v-for="fruta in frutas" :key="fruta"> {{ fruta }} </li>
@@ -30,9 +32,15 @@
 
 <script>
 import Frutas from './components/Frutas.vue'
+import frutasMixin from './frutasMixin'
+import usuarioMixin from './usuarioMixin' // segundo mixin sendo criado
 
 export default {
   components: { Frutas },
+  mixins: [frutasMixin, usuarioMixin], /* mixins significa mistura, no caso é como se ele 
+  fizesse uma mesclagem daquilo que está nesse component. Ele faz o merge das informações.
+  Caso tenha metodos e variaveis com nomes parecidos nos dois ele da preferencia para
+  os registrados nesse componente */
   filters: {
     acaoCPF(valor){ 
       const arr = valor.split('')
@@ -45,16 +53,10 @@ export default {
   data() {
     return {
       cpfAluno: '60070080090',
-      fruta: '',
-      frutas: ['banana', 'maça', 'laranja'] // Lista generica
+      frutas: ['abacate'] /* Como é uma lista que está presente também no mixin esse ira sobrepor o do mixin porque o que estiver no componente terá preferencia */
     }
   },
-        methods: {
-            add() {
-                this.frutas.push(this.fruta) // Metodo para adicionar fruta
-                this.fruta = '' // limpa depois de adicionar
-            }
-        }
+        methods: {}
 }
 </script>
 
