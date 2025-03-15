@@ -1,3 +1,4 @@
+<!-- Montando cenario com erro de duplicação -->
 <template>
 	<div id="app">
 		<h1>Filtros & Mixins</h1>
@@ -17,6 +18,13 @@
     <hr/>
     <hr/>
     <Frutas/>
+    <hr/>
+    <div> <!-- lista replicada localmente -->
+        <ul>
+            <li v-for="fruta in frutas" :key="fruta"> {{ fruta }} </li>
+        </ul>
+        <input type="text" v-model="fruta" @keydown.enter="add" /> <!-- Apertando enter adiciona -->
+    </div>
 	</div>
 </template>
 
@@ -36,9 +44,17 @@ export default {
   },
   data() {
     return {
-      cpfAluno: '60070080090'
+      cpfAluno: '60070080090',
+      fruta: '',
+      frutas: ['banana', 'maça', 'laranja'] // Lista generica
     }
-  }
+  },
+        methods: {
+            add() {
+                this.frutas.push(this.fruta) // Metodo para adicionar fruta
+                this.fruta = '' // limpa depois de adicionar
+            }
+        }
 }
 </script>
 

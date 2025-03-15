@@ -7,7 +7,7 @@
     <p> CPF após o filtro cpf com a inversão: {{ cpfAluno | acaoCPF | inverter}} </p>
     <p> CPF apenas com o filtro da inversão:  {{ cpfAluno | inverter}} </p> 
     <hr/>
-    <input type="text" :value="cpfAluno"> <!-- v-model não suporta esse tipo de estrutura -->
+    <input type="text" :value="cpfAluno"> <!-- Uso de filtro no v-binding na aula -->
     <br />
     <input type="text" :value="cpfAluno | acaoCPF">
     <br />
