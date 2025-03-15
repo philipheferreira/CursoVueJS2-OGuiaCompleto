@@ -17,10 +17,10 @@
     <input type="text" :value="cpfAluno | acaoCPF | inverter">
     <hr/>
     <hr/>
-    <h3> Componente sendo chamado de lista </h3>
+    <h3> Componente sendo chamado </h3>
     <Frutas/>
     <hr/>
-    <h4> Mixin sendo chamado </h4>
+    <h4> Lista sendo chamada localmente usando Mixin </h4>
     <div> <!-- lista replicada localmente -->
         <ul>
             <li v-for="fruta in frutas" :key="fruta"> {{ fruta }} </li>
