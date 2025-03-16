@@ -1,18 +1,19 @@
 <template>
 	<div id="app" class="container">
 		<h1>HTTP com Axios</h1>
-    <hr/>
-    <Formulario></Formulario>
 	</div>
 </template>
 
 <script>
-import Formulario from './components/Formulario.vue';
 export default {
   name:'principalApp',
-  components: {
-    Formulario
-  }
+  created() {
+    this.$http.post('usuarios.json', {
+      nome: 'Maria',
+      email: 'maria_mari@gmail.com'
+    }).then(res => console.log(res))
+  },
+  components: {}
 }
 </script>
 
