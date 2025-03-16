@@ -1,0 +1,4 @@
+Caso o código que abrir não esteja inicializando, verificar se precisa instalar os pacotes dode, para isso utilizar o comando: 
+* npm install
+no capitulo 2 é preciso instalar o boodstrap vue, usando o comando: 
+* npm install bootstrap-vue bootstrap
