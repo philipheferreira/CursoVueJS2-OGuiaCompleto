@@ -9,7 +9,7 @@
 <script>
 import Menu from './components/template/Menu.vue'
 export default {
-	comments: {Menu}
+	components: {Menu}
 }
 </script>
 
