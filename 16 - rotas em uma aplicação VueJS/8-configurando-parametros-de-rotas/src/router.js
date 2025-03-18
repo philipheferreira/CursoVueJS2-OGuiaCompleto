@@ -11,7 +11,7 @@ export default new Router({
         path: '/',
         component: Inicio
     }, {
-        path: '/usuario',
+        path: '/usuario/:id', //os 2 pontos significa que ira receber parametros para poder direcionar as operações. Ai ele espera receber um id
         component: Usuario
     }]
 })
