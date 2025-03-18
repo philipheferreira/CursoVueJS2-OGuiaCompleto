@@ -1,20 +1,28 @@
 <template>
-	<div id="app">
-		<h1>Rotas com VueRouter</h1>
-    <router-view/><!-- Significa que vai carregar dinamicamente os paths declarados nesse componente Vue -->
-	</div>
+  <div id="app">
+    <img alt="Vue logo" src="./assets/logo.png">
+    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  </div>
 </template>
 
 <script>
+import HelloWorld from './components/HelloWorld.vue'
+
 export default {
-	
+  name: 'App',
+  components: {
+    HelloWorld
+  }
 }
 </script>
 
 <style>
-	#app {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
 </style>
