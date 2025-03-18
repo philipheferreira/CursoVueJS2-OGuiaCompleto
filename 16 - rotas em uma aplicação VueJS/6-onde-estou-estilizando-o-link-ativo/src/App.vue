@@ -2,7 +2,7 @@
 	<div id="app">
 		<h1>Rotas com VueRouter</h1>
     <Menu/>
-    <router-view/><!-- Significa que vai carregar dinamicamente os paths declarados nesse componente Vue -->
+    <router-view/>
   </div>
 </template>
 
