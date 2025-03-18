@@ -1,23 +1,22 @@
 <template>
-  <div id="app">
+	<div id="app">
+		<h1>Rotas com VueRouter</h1>
+    <Menu/>
+    <router-view/><!-- Significa que vai carregar dinamicamente os paths declarados nesse componente Vue -->
   </div>
 </template>
 
 <script>
-
+import Menu from './components/template/Menu.vue'
 export default {
-  name: 'App',
-  components: {}
+	comments: {Menu}
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+	#app {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 </style>
