@@ -1,3 +1,18 @@
+<!-- Sobre a aula de hoje
+No Vue.js, o comando $emit é utilizado para disparar 
+eventos personalizados de um componente filho para um 
+componente pai. Ele permite a comunicação entre componentes, 
+garantindo que o pai possa escutar e reagir a eventos
+ gerados pelo filho.
+-->
+
+<!-- 
+Quando um componente filho quer enviar uma informação ou notificar
+ uma ação para o componente pai, ele usa $emit para disparar um
+  evento. O componente pai pode então escutar esse evento e 
+  executar uma ação específica.
+-->
+
 <template>
 
     <div class="componente">
