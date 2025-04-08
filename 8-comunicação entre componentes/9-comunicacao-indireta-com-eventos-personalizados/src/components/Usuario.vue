@@ -40,7 +40,8 @@ export default {
     },
     methods: {
         alterarNome(){
-            this.nomeCompleto = 'Ana'
+            this.nomeCompleto = 'Ana' /* altera o nome completo no component pai, o component esta bindado com os componentes filho, atualizando eles ao 
+            mesmo tempo quando alterado. Sendo que ele recebe eles pela conexão através dos prompts */
         }
     }
 }
