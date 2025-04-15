@@ -1,11 +1,12 @@
 <template>
   <div id="app">
-      Inicio APP
+      <h1>Rotas com VueRouter</h1>
+      <Menu />
   </div>
 </template>
 
 <script>
-
+import Menu from './components/template/Menu.vue'
 export default {
   name: 'inicioApp',
   components: {}
