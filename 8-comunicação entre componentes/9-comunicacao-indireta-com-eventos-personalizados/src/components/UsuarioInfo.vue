@@ -48,7 +48,7 @@ Quando um componente filho quer enviar uma informação ou notificar
             },
             reiniciarNome(){/* eslint-disable */
                 this.nome1 = 'Philiphe Siqueira Ferreira'
-                this.$emit('reiniciar-nome', this.nome1); /* $emit é uma forma de disparar um evento para o componente pai como uma forma de ter uma relação do componente filho com o pai */
+                this.$emit('comando-reiniciar-nome', this.nome1); /* $emit é uma forma de disparar um evento para o componente pai como uma forma de ter uma relação do componente filho com o pai */
             }
         }
     }

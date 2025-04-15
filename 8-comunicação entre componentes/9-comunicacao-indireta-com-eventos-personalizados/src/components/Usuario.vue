@@ -11,9 +11,9 @@
             <app-usuario-info 
             :nome="nomeCompleto" 
             v-bind:nome1="nomeCompleto" 
-            @reiniciar-nome="nomeCompleto = $event"
+            @comando-reiniciar-nome="nomeCompleto = $event"
             /> <!-- Dentro de aspas ele vai interpretar como um string, se eu mandar true ou false será interpretado como boolean. Mandando numero ira como number -->
-            <app-usuario-info nome="1" v-bind:nome1="nomeCompleto" @reiniciar-nome="nomeCompleto = $event"/> <!-- $event significa que ele recebe o valor disparado no component filho para ficar armazenado na variavel nomeCompleto definida no componente pai. @reiniciar-nome é um metodo que é acionado no componente filho -->
+            <app-usuario-info nome="1" v-bind:nome1="nomeCompleto" @comando-reiniciar-nome="nomeCompleto = $event"/> <!-- $event significa que ele recebe o valor disparado no component filho para ficar armazenado na variavel nomeCompleto definida no componente pai. @reiniciar-nome é um metodo que é acionado no componente filho -->
             <app-usuario-editar />
 
         </div>
