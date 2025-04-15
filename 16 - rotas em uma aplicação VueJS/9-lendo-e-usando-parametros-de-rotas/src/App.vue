@@ -9,7 +9,7 @@
 <script>
 import Menu from './components/template/Menu.vue'
 export default {
-  name: 'inicioApp',
+  name: 'App',
   components: {Menu}
 }
 </script>
