@@ -13,7 +13,7 @@
                 v-bind:nome1="nomeCompleto" 
                 @reiniciar-nome="nomeCompleto = $event"
                 :reiniciarFn="reiniciarNomePrincipal"
-                /> <!-- Dentro de aspas ele vai interpretar como um string, se eu mandar true ou false será interpretado como boolean. Mandando numero ira como number -->
+                /> <!-- Pega o props reiniciarFn declarado dentro do component filho e joga a funcionalidade do reiniciarNomePrincipal criada no componente pai -->
                 <app-usuario-info nome="1" v-bind:nome1="nomeCompleto" @reiniciar-nome="nomeCompleto = $event"/>
                 <app-usuario-editar />
     
@@ -43,6 +43,9 @@
         methods: {
             alterarNome(){
                 this.nomeCompleto = 'Ana'
+            },
+            reiniciarNomePrincipal() {
+                this.nomeCompleto = 'Senhor alguma coisa'
             }
         }
     }
