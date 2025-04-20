@@ -9,7 +9,7 @@
         <button @click="alterarNome">Alterar Nome</button>
         <div class="componentes">
 
-            <app-usuario-info 
+            <app-usuario-info
             :nome="nomeCompleto"
             v-bind:nome1="nomeCompleto"
             @comando-reiniciar-nome="nomeCompleto = $event"

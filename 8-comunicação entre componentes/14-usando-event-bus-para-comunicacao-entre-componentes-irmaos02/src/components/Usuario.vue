@@ -9,10 +9,10 @@
         <button @click="alterarNome">Alterar Nome</button>
         <div class="componentes">
 
-            <app-usuario-info 
-            :nome="nomeCompleto" 
+            <app-usuario-info
+            :nome="nomeCompleto"
             :idade="idade"
-            v-bind:nome1="nomeCompleto" 
+            v-bind:nome1="nomeCompleto"
             @reiniciar-nome="reiniciarNome"
             :reiniciarFn="reiniciarNomePrincipal"
             /> <!-- Dentro de aspas ele vai interpretar como um string, se eu mandar true ou false será interpretado como boolean. Mandando numero ira como number -->
@@ -55,7 +55,7 @@ export default {
             this.nomeCompleto = 'Ana'
         },
         reiniciarNomePrincipal() { // Função criada para se comunicar com o componente filho
-            this.nomeCompleto = 'Philiphe Siqueira Ferreira'
+            this.nomeCompleto = 'Algum outro nome'
         },
     }
 }
