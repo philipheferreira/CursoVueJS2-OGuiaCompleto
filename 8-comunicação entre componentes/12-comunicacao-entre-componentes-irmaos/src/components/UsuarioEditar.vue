@@ -15,17 +15,12 @@
     export default{
         name: 'usuarioEditar',
         props: { 
-            idade: Number
-        },
-        data() {
-            return {
-                idadeLocal: 21
-            }
+            idadeLocal: Number
         },
         methods: {
             alterarIdade(){
-                this.idadeLocal = 33
-                this.$emit('idadeMudou', 33) // manda a idade alterada para o pai e os irmãos
+                let valor = 33
+                this.$emit('idade-mudou', valor) // manda a idade alterada para o pai e os irmãos
             }
         }
 

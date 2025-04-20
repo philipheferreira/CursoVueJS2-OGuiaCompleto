@@ -5,20 +5,20 @@
         <h1>Componente Usuário</h1>
         <p>Esse é um componente muito legal!</p>
         <p>Nome é <strong> {{ nomeCompleto }} </strong></p>
-        <p> Idade  <strong> {{ idade }} </strong> </p>
+        <p> Idade é <strong> {{ idade }} </strong> </p>
         <button @click="alterarNome">Alterar Nome</button>
         <div class="componentes">
 
             <app-usuario-info 
-            :nome="nomeCompleto" 
-            :idade="idade"
-            v-bind:nome1="nomeCompleto" 
-            @reiniciar-nome="reiniciarNome"
+            :nome="nomeCompleto"
+            v-bind:nome1="nomeCompleto"
+            @comando-reiniciar-nome="nomeCompleto = $event"
             :reiniciarFn="reiniciarNomePrincipal"
+            :idadeLocal="idade"
             @idadeMudou="idade = $event"
             /> <!-- Dentro de aspas ele vai interpretar como um string, se eu mandar true ou false será interpretado como boolean. Mandando numero ira como number -->
-            <app-usuario-info nome="1" v-bind:nome1="nomeCompleto" @reiniciar-nome="reiniciarNome" :idade="idade" />
-            <app-usuario-editar :idade="idade" @idadeMudou="idade = $event"/> <!-- :idade faz o binding para passar a informação e o @idadeMudou recebe o event de idade no componente filho e repassa para os irmãos -->
+            <app-usuario-info nome="1" v-bind:nome1="nomeCompleto" @comando-reiniciar-nome="nomeCompleto = $event" :idade="idade" />
+            <app-usuario-editar :idadeLocal="idade" @idade-mudou="idade = $event"/> <!-- :idade faz o binding para passar a informação e o @idadeMudou recebe o event de idade no componente filho e repassa para os irmãos -->
 
         </div>
 
@@ -49,7 +49,7 @@ export default {
             this.nomeCompleto = 'Ana'
         },
         reiniciarNomePrincipal() { // Função criada para se comunicar com o componente filho
-            this.nomeCompleto = 'Philiphe Siqueira Ferreira'
+            this.nomeCompleto = 'Senhor alguma coisa'
         },
     }
 }
