@@ -4,6 +4,7 @@
             <button @click="numero--">&lt;</button>
             <button @click="numero++">&gt;</button>
         </span>
+        {{ numero }} {{ indice }} <!-- Numero é uma variavel criada dentro do component e indice é uma operação gerada dentro do computed -->
         <Citacao :texto="citacoes[indice].textoLocal"></Citacao> <!-- Enviando os dados para o props do componente citacao receber -->
     </div>
 </template>
