@@ -20,6 +20,7 @@
         methods: {
             alterarIdade(){
                 let valor = 33
+                this.idadeLocal = valor
                 this.$emit('idade-mudou', valor) // manda a idade alterada para o pai e os irmãos
             }
         }
