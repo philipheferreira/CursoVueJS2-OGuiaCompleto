@@ -1,4 +1,4 @@
-<!-- Nada imde de utilizar a chamada do slot padrão junto com os slots nomeados. A fim de fazer um tratamento melhor do component ou customizar a aplicação -->
+<!-- Nada impede de utilizar a chamada do slot padrão junto com os slots nomeados. A fim de fazer um tratamento melhor do component ou customizar a aplicação -->
 
 <template>
     <div class="citacoes">
