@@ -10,7 +10,7 @@
 
 <div id="app">
 	
-	<h1 ref="aulaRef" > {{aula}} </h1>
+	<h1 ref="aulaRef" > {{aula}} </h1> <!-- Usando ref, qe é uma propriedade do Vue-->
 	<h2> {{ modulo }} </h2>
 	<button @click="alterarAula">Alterar Aula</button>
 	<button @click="AlterarModulo">Alterar Módulo</button>
@@ -39,7 +39,7 @@
 	})
 
 
-// Não é recomendado realizar fazer interação direta. Porque você existe o estado interno da instancia do Vue, em que ele diz que é outro valor, e ocorre a manupulação do valor do DOM que foi alterado diretamente. Quando clicar o botao alterar Aula ele ira acrescentar o valor salvo dentro da instancia do Vue
+// Não é recomendado realizar interação direta. Porque você existe o estado interno da instancia do Vue, em que ele diz que é outro valor, e ocorre a manupulação do valor do DOM que foi alterado diretamente. Quando clicar o botao alterar Aula ele ira acrescentar o valor salvo dentro da instancia do Vue
 vm.$refs.aulaRef.innerText = "Alterado diretamente :c"
 </script>
 
