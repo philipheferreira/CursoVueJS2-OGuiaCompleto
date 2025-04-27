@@ -13,13 +13,6 @@ Em seguida tem que instalar o vue nessa versão do node do nvm que é a 20. Depo
 Em seguida é só inicializar o projeto: 
 * npm run serve
 
-no capitulo 2 é preciso instalar o boodstrap vue, usando o comando: 
-* npm install bootstrap-vue bootstrap
-
-No capitulo 2 é preciso instalar a dependência axios e outras dependencias para fazer funcionar, usando o comando: 
-npm i --save axios
-
-
 * No projeto tem a pasta component que é onde tem todos os components criados para serem chamados; 
 * O arquivo app.vue que estarta o projeto e é declarado no arquivo main.js para fazer isso;
 * O arquivo main.js que adiciona os projetos necessários ou que precisam ser declarados para serem chamadados
