@@ -1,5 +1,5 @@
 <template>
-    <Painel titulo="Carrinho" azul :notificacao="produtos.length">
+    <componentPainel titulo="Carrinho" azul :notificacao="produtos.length">
         <div class="carrinho">
             <table>
                 <thead>
@@ -22,11 +22,12 @@
                 <span>Total: <strong>{{ total | dinheiro }}</strong></span>
             </div>
         </div>
-    </Painel>
+    </componentPainel>
 </template>
 
 <script>
 export default {
+    name: 'componentCarrinho',
     computed: {
         total() {
             return this.produtos.map(p => p.quantidade * p.preco)

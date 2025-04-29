@@ -1,5 +1,5 @@
 <template>
-    <Painel titulo="Loja Virtual" verde>
+    <componentPainel titulo="Loja Virtual" verde>
         <div class="loja">
             <span>Adicionar</span>
             <input type="number" v-model.number="quantidade">
@@ -7,12 +7,13 @@
             <input type="number" v-model.number="preco">
             <button @click="adicionar">Agora!</button>
         </div>
-    </Painel>
+    </componentPainel>
 </template>
 
 <script>
 
 export default {
+    name: 'componentLoja',
     data() {
         return {
             sequencia: 1,

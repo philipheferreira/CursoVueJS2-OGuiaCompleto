@@ -1,15 +1,16 @@
 <template>
-    <Painel titulo="Resumo" roxo>
+    <componentPainel titulo="Resumo" roxo>
         <div class="resumo">
             <span>Total: <strong>{{ total | dinheiro }}</strong></span>
             <hr>
             <button>Finalizar!</button>
         </div>
-    </Painel>
+    </componentPainel>
 </template>
 
 <script>
 export default {
+    name: 'componentResumo',
     computed: {
         total() {
             return this.produtos.map(p => p.quantidade * p.preco)
