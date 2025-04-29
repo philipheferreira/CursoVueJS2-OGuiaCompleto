@@ -14,14 +14,9 @@ Em seguida é só inicializar o projeto:
 * npm run serve
 
 Nesse capitulo especifico é necessário instalar o Vuex que é o pacote de controle de estado do vue. Para instalar ele é só usar o comando a baixo:
-* npm i --save vuex
-
-ou
 
 * npm install vuex@3
 
-caso queira instalar uma versão exata é só usar o comando a baixo:
-* npm i --save vue@3.0.1 -E
 
 * No projeto tem a pasta component que é onde tem todos os components criados para serem chamados; 
 * O arquivo app.vue que estarta o projeto e é declarado no arquivo main.js para fazer isso;
