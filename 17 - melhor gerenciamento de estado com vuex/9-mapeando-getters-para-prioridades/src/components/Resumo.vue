@@ -12,9 +12,6 @@
 export default {
     name: 'componentResumo',
     computed: {
-        produtos() { // faz o acesso da aplicação vuex apontando a aplicação store criada globalmente pelo main.js. acessa a classe produtos criada
-            return this.$store.state.produtos
-        },
         total() {
             return this.$store.getters.valorTotal // puxa o valor declarado dentro de getters
         }
