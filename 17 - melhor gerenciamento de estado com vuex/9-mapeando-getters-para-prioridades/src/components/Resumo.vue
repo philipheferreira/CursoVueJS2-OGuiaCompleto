@@ -9,12 +9,30 @@
 </template>
 
 <script>
+import { mapGetters} from 'vuex' // faz um link direto com todas as aplicações de getters declaradas
+
 export default {
     name: 'componentResumo',
+    // a chamada do getters pode ocorrer de quatro formas
+    
+    // PRIMEIRA FORMA
+    /*computed: mapGetters(['valorTotal'])*/
+
+    // SEGUNDA FORMA
+    /*computed: mapGetters({
+        total: 'valorTotal'
+    })*/
+
+    // TERCEIRA FORMA
+    /*computed: {
+        ...mapGetters(['valorTotal']) // faz o mapeamento e puxar qualquer informação referente ao getters dentro da funcionalidade valorTotal
+    }*/
+
+    // QUARTA FORMA
     computed: {
-        total() {
-            return this.$store.getters.valorTotal // puxa o valor declarado dentro de getters
-        }
+        ...mapGetters({
+            total: 'valorTotal'
+        })
     }
 }
 </script>
