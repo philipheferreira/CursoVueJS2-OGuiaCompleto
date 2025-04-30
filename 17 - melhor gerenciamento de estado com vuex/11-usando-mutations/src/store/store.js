@@ -17,7 +17,8 @@ export default new Vuex.Store({
             .reduce((total, atual) => total + atual, 0)
         }
     },
-    mutations: { // varias funções que tem a responsabilidade de alterar o estado global da aplicação controlado pelo vuex => são como os setters
+    mutations: { /* varias funções que tem a responsabilidade de alterar o estado global 
+        da aplicação controlado pelo vuex => são como os setters. É para alterar o estado central. Preferencia que por isso só trabalhe codigos sincronos */
         adicionarProduto(state, payload) {
             state.produtos.push(payload)
         }
