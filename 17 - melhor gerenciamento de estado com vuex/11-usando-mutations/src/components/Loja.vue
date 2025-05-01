@@ -33,8 +33,9 @@ export default {
             // eslint-disable-next-line
             console.log(produto)
 
-            this.$store.state.produtos.push(produto) /* pega o produto que acabou de ser criado no metodo adicionar e mandou para ser
+            /* this.$store.state.produtos.push(produto)  pega o produto que acabou de ser criado no metodo adicionar e mandou para ser
              salvo na classe presente no store do Vuex */
+             this.$store.commit('adicionarProduto', produto)
         }
     }
 }
