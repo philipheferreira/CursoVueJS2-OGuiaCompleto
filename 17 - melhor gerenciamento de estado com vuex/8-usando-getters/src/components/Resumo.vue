@@ -1,3 +1,5 @@
+<!-- NESSE CAPITULO E GETTER VAI PEGAR A LISTA DE PRODUTOS E RETORNAR A LISTA DE PRODUTOS COM O TOTAL PREVIAMENTE CALCULADO  -->
+
 <template>
     <componentPainel titulo="Resumo" roxo>
         <div class="resumo">
@@ -16,7 +18,7 @@ export default {
             return this.$store.state.produtos
         },
         total() {
-            return this.$store.getters.valorTotal // puxa o valor declarado dentro de getters
+            return this.$store.getters.valorTotal // puxa o valor declarado dentro de getters diretamente
         }
     }
 }

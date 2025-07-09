@@ -12,6 +12,6 @@ Vue.filter('dinheiro', valor => {
 })
 
 new Vue({
-	store,
+	store, // inicializa o Vuex para startar tudo junto com a aplicação
 	render: h => h(App),
 }).$mount('#app')

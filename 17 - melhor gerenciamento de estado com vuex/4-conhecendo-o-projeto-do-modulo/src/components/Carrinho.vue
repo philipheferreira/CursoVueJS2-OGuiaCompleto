@@ -13,7 +13,7 @@
                     <tr v-for="produto in produtos" :key="produto.nome">
                         <td>{{ produto.nome }}</td>
                         <td>{{ produto.quantidade }}</td>
-                        <td>{{ produto.preco | dinheiro }}</td>
+                        <td>{{ produto.preco | dinheiro }}</td> <!-- Filter dinheiro sendo utilizado, ele foi declarado no main.js então roda nativamente na aplicação -->
                     </tr>
                 </tbody>
             </table>
@@ -29,7 +29,7 @@
 export default {
     name: 'componentCarrinho',
     computed: {
-        total() {
+        total() { // Assim que a aplicação inicializa pega o preço dentro do objeto atraves do map e soma os valores colocandoos juntos dentro de total 
             return this.produtos.map(p => p.quantidade * p.preco)
                 .reduce((total, atual) => total + atual, 0)
         }

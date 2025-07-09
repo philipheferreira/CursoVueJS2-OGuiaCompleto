@@ -12,8 +12,8 @@ export default new Vuex.Store({
         ]
     },
     getters: {
-        valorTotal(state){ // função retorna valor, aplicação getters
-            return state.produtos.map(p => p.quantidade * p.preco)
+        valorTotal(state){ // recebendo dentro de parametro as informações dentro de state
+            return state.produtos.map(p => p.quantidade * p.preco) // faz um mapeamento da quantidade e multiplicando elas pelo preço
             .reduce((total, atual) => total + atual, 0)
         }
     }

@@ -12,6 +12,6 @@ Vue.filter('dinheiro', valor => {
 })
 
 new Vue({
-	store,
+	store, // store ta sendo rodado dentro do Vue no momento renderização junto com a aplicação
 	render: h => h(App),
 }).$mount('#app')
