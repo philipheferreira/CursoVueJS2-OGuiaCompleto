@@ -26,7 +26,8 @@
     	somar() {
     		this.contador++
     	},
-    	atualizarXY(event) {
+    	atualizarXY(event) { /* O evento criado aqui recebe todos os valores de evento do DOM dentro da Instancia Vue criada, ou seja, eu pego o valor dentro de evento e seleciono o que eu quero
+			de posicao de mouse no eixo x e y para recolocar dentro das variaveis x e y que eu criei, pra mostrar */
     		this.x = event.clientX
     		this.y = event.clientY
     	}
