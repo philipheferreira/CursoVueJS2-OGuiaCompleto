@@ -1,3 +1,5 @@
+/* Essa aula mistura comandos do vue com comandos do javascript */
+
 <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 
 <style type="text/css">
@@ -39,11 +41,16 @@
 	})
 
 
-// Não é recomendado realizar interação direta. Porque você existe o estado interno da instancia do Vue, em que ele diz que é outro valor, e ocorre a manupulação do valor do DOM que foi alterado diretamente. Quando clicar o botao alterar Aula ele ira acrescentar o valor salvo dentro da instancia do Vue
+/* Não é recomendado realizar interação direta. Porque você existe o estado interno da instancia do Vue, em que ele diz que é outro valor, 
+e ocorre a manupulação do valor do DOM que foi alterado diretamente. Quando clicar o botao alterar Aula ele ira acrescentar o valor 
+salvo dentro da instancia do Vue */
 vm.$refs.aulaRef.innerText = "Alterado diretamente :c"
 </script>
 
-<!-- usar no console do motor de internet => document.querySelector('h1') -->
+<!-- usar no console do motor de internet => document.querySelector('h1') . Isso ocorre porque eu consigo acessar o virtual DOM direto
+ do motor de busca, como o Vue ser reativo ele altera tudo em tempo real, so que como eu estou alterando ref ele vai alterar 
+ apenas o nome do modulo e nao o nome da aula 
+ mexer -->
 
 <!-- mudar o valor usando um comando pelo motor de busca => document.querySelector('h1').innerText = 'Bla bla' -->
 

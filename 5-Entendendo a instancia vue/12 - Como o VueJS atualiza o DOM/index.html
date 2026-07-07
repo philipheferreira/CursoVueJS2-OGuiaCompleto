@@ -1,3 +1,12 @@
+/* O metodo de otimizar a DOM nao foi criado ou inventado pelo Vue, outros frameworks ja faziam isso antes. Entretanto 
+ser uma ferramenta util. Mexer direto na DOM pode deixar o codigo muito mais lento, deixar isso a cargo do Vue ser a 
+sacada mais experta.
+
+So ressaltando que o DOM virtual nao esta na parte do Vue e sim do javascript, ser uma replica da DOM, so que tudo 
+for criado na DOM virtual vai bater na DOM fisica real, para poder atualizar ela apos essa verificacao.
+
+A DOM virtual faz a verificacao se a modificacao deve ser repassada para a DOM fisica*/
+
 <!DOCTYPE html>
 <html>
 <head>

@@ -14,6 +14,8 @@
 	
 	const vm = new Vue({
 		//el: '#app', // o comando mount preenche o nome app definido previamente
+		/* bara usar o template a baixo necessario estar o externo. Entretanto dessa forma nao da pra ter um controle bom
+		dos comandos de diversas ferramentas do vue */
 		template: `
 			<div>
 				<h1 ref="aulaRef" > {{aula}} </h1>
@@ -21,7 +23,7 @@
 				<button @click="alterarAula">Alterar Aula</button>
 				<button @click="alterarModulo">Alterar Módulo</button>
 			</div>
-			`,
+			`, /* O nome disso ser backsteack, no react a parte html ser assim */
 		data: {
 			aula: 'Aula: Montando Instância',
 			modulo: 'Módulo: Instância Vue'

@@ -1,0 +1,5 @@
+ser possivel criar varias instancias dentro de uma aplicacao vue pra controlar diferentes
+paginas do projeto, entretanto criar diferentes instancias pra fazer esse controle nao faz 
+muito sentido levando em consideracao o fato de que faz mais sentido criar instancias 
+diferentes em componentes diferentes para componetizar a aplicacao e realizar o versionamento
+do codigo de uma forma mais pratica e direcionada

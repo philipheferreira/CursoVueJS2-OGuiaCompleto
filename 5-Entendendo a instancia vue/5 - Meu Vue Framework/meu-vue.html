@@ -1,7 +1,11 @@
+<!--  Esse codigo a pessoa esta fazendo toda a logica de funcionamento de framework. Criado chamadas direto para o DOM, para que a variavel
+$el receba o DOM, para que o $data recebe os parametros de data que quarda todas as variaveis importantes dentro de DOM, criar os 
+metodos que dentro de for ira analisar todo o data e definir o que usar o metodo get e set dentro dessa lista de parametro quando eles 
+forem assionados. Ou seja, isso ser toda a funcionalidade de um framework puro so que a gente montando -->
+
 <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 
 <style type="text/css">
-	
 
 
 </style>
@@ -15,15 +19,16 @@
 <script type="">
 
 	function MeuVue(params){
-		this.$el = document.querySelector(params.el)
-		this.$data = params.data
+		this.$el = document.querySelector(params.el) /* Uso do javascript. Estou pegando o elemento DOM atraves do querySelector e colocando dentro do el */
+		this.$data = params.data /* Pegando os parametros data do DOM e salvando dentro do $data */
 
-		for(let atr in this.$data){
-			Object.defineProperty(this, atr, {
-				get: () => {
+		for(let atr in this.$data){/* Pegando os objetos passados dentro desse parametro e definindo um for pra pegar
+			cada um dos objetos passados nesse parametro*/
+			Object.defineProperty(this, atr, {/* aqui ele faz a modificacao de protosys de forma reativa */
+				get: () => { /* Definir o metodo get */
 					return this.$data[atr]
 				},
-				set: value => {
+				set: value => { /* Definir o metodo set */
 					this.$data[atr] = value
 				}
 			})

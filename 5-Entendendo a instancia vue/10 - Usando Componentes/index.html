@@ -27,7 +27,10 @@
             </div>
         `,
         data: function() {
-            return {
+            return { /* Por mais que o data exista, necessario criar o comando function e return a cima para 
+                poder retornar as informacoes dos valores para o DOM. Diferente de metodos que retorna funcios, data
+                retorna valores de variaveis, necessitando de uma funcao para retornar e atualizar o valor para os componentes
+                atualizando o estado de cada complonente para as aplicacoes */
                 aula: 'Aula: Montando Instância Vue',
                 modulo: 'Módulo: Instância Vue'
             }
@@ -42,9 +45,9 @@
         }
     })
 
-    const vm = new Vue({
+    const vm = new Vue({ /* O instanciamento ocorre aqui em baixo, em vez de junto com o componente como antes */
         el: '#app'
-    }) // necessario ter uma instancia criada para poder receber um componente
+    }) 
 </script>
 
 
