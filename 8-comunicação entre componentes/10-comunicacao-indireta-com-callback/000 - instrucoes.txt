@@ -1,0 +1,2 @@
+Conclusao: Eu posso ou emitir um evento personalizado atravez do emit para modificar
+o valor da variavel principal no component filho, ou 

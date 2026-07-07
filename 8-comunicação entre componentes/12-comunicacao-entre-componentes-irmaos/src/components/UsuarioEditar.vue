@@ -20,7 +20,8 @@
         methods: {
             alterarIdade(){
                 let valor = 33
-                this.idadeLocal = valor
+                // this.idadeLocal /* Nao ira funcionar porque nao deixa modificar o valor props recebido, como o componente filho nao pode fazer essa modificacao
+                // a gente utiliza o comando emit para mandar o novo valor para o pai */
                 this.$emit('idade-mudou', valor) // manda a idade alterada para o pai e os irmãos
             }
         }

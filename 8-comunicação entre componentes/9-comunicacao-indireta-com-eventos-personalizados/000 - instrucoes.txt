@@ -1,0 +1,2 @@
+Aqui foi utilizado o comando emit do component filho para o pai para atualizar a variavel
+tanto no pai como no filho, realizando uma comunicacao indireta atualizando o valor da variavel

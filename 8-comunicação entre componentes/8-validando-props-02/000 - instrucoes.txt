@@ -1,0 +1,4 @@
+Ate aqui esta sendo utilizado a comunicacao de uma variavel com os dois componentes,
+O componente pai ser o unico ate entao que faz as modificacoes e as modificacoes sao
+contemplatadas tanto no component pai quanto no filho, entretanto no filho tem validacoes
+para com o props recebido e tem metodos modificadores utilizando javascript puro

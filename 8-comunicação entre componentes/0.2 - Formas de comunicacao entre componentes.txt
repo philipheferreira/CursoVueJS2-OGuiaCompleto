@@ -1,0 +1,46 @@
+Listar as formas diferentes de realizar a comunicacao entre os componentes de um projeto.
+
+Todos os metodos de componentizacao utilizados: Props, $emit, callbacks, event Bus(criacao
+de barramento e controle de metodo por ele), - A partir daqui sao do segundo capitulo
+de componentes - Slots, Slots Nomeados, Slot padrao junto
+com slot nomeado, componente dinamico, componente dinamico com Keep alive
+
+
+COMUNICACAO DIRETA COM PROPS 1 E 2 (pai -> filho)
+A primeira ser a Props, comunicacao direta props(pai -> filho). Tem a props no pai que 
+manda a informacao e tem a props no filho que apenas recebe a informacao do pai
+
+A segunda tambem ser props, mas a props utilizada no component filho tem unicamente o objetivo
+de armazenar a informacao da variavel que vem do pai , localmente no filho, e 
+usar metodos para modificar como a imagem ser mostrada
+
+VALIDANDO PROPS 1 E 2
+Cria validacoes e determina tipos de variaveis para receber a props, ou seja, validacoes
+do tipo de props recebidas. Tambem mostra explorando o metodos dentro dessas validacoes
+
+COMUNICACAO INDIRETA COM EVENTOS PERSONALIZADOS ($emit)
+Uso do emit para comunicacao do component filho com o pai dessa variavel. Modificando
+esse parametro e corrigindo essas funcionalidades. Utilizado o emit no component
+filho para mandar essas funcoes:
+	 
+	this.$emit('nomeMudou', this.nome) 
+
+e o emit no componente pai para receber a informacao e modificar:
+
+	<app-usuario-info
+		:nome="nome"
+		@nomeMudou="nome = $event"	
+	/>
+
+
+COMUNICACAO INDIRETTA COM CALLBACK (Faz o mesmo do $emit so que de outro jeito)
+A aplicacao tambem ser da comunicacao do filho com o pai, modificando a variavel do 
+componente em todas as partes dos componentes quando alterado
+
+COMUNICACAO ENTRE COMPONENTES IRMAOS
+Realiza a modificacao do componente com o componente pai e filho com realacao a idade
+
+
+
+
+
