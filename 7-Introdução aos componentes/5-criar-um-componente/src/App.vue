@@ -10,7 +10,8 @@
 
 <script>
 export default {
-
+ /* Como declarei uma vez dentro do main.js o app-contador esta existindo globalmente, logo ele nao precisa ser declarado localmente
+ detro da aplicacao app */
 }
 </script>
 
