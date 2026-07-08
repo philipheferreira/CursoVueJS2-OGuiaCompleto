@@ -1,5 +1,7 @@
 <template>
+
 	<div id="app">
+
 		<h1>Registrar Reclamação</h1>
 		<div class="conteudo">
 			<form class="painel">
@@ -64,7 +66,9 @@
 				</Rotulo>
 			</div>
 		</div>
+		
 	</div>
+
 </template>
 
 <script>
