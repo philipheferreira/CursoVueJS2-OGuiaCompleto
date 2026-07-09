@@ -1,0 +1,2 @@
+As diretivas sao as funcionalidades pre definidas no Vue, como o V-once, V-for, V-if.
+Sao comandos que eu posso declarar para reutilizar no codigo para as minhas operacoes

@@ -1,3 +1,7 @@
+<!-- Criar minhas proprias diretivas significa
+ criar aquelas funcionalidades proprias como
+ as que existem no Vue. Como o v-bind, v-once, v-for -->
+
 <template>
 	<div id="app">
 		<h1>Diretivas</h1>
