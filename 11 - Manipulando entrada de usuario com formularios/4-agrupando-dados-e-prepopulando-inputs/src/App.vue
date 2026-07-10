@@ -1,3 +1,10 @@
+/* Uma boa pratica seria organizar o formulario com base na criacao de um objeto para as operacoes. Em que
+as variaveis do formularios vao ter suas informacoes linkadas no objeto para realizar a operacao da melhor 
+forma possivel */
+
+/* Caso eu delete as variaveis dentro do objeto usuario, como usuario.email, usuario.senha e usuario.idade, como
+um objeto foi criado, o javascript vai criar essas variaveis dinamicamente quando elas sao chamadas dentro dos 
+v-model pelo input, fazendo com que a aplicacao nao quebre e essas aplicacoes sejam geradas */
 <template>
 	<div id="app">
 		<h1>Registrar Reclamação</h1>
@@ -39,13 +46,13 @@
 			<div class="painel">
 				<div class="cabecalho">Resultado</div>
 				<Rotulo nome="E-mail">
-					<span> {{ usuario.email }} </span> <!-- Feita a interpolação -->
+					<span> {{ usuario.email }} </span> <!-- Essas aspas sao o proceso de interpolacao, logo foi Feita a interpolação -->
 				</Rotulo>
 				<Rotulo nome="Senha">
-					<span> {{ usuario.senha }} </span>
+					<span> {{ usuario.senha }} </span> <!-- Essas aspas sao o proceso de interpolacao, logo foi Feita a interpolação -->
 				</Rotulo>
 				<Rotulo nome="Idade">
-					<span> {{ usuario.idade }} </span>
+					<span> {{ usuario.idade }} </span> <!-- Essas aspas sao o proceso de interpolacao, logo foi Feita a interpolação -->
 				</Rotulo>
 				<Rotulo nome="Mensagem">
 					<span>???</span>

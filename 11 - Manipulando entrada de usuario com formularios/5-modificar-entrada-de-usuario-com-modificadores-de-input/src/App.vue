@@ -77,19 +77,19 @@ import Escolha from './components/Escolha.vue'
 export default {
 	name: 'app',
 	components: { Rotulo, Escolha },
-  	computed: {
+	computed: {
 		tipo() {
 			return typeof this.usuario.idade
 		}
 	},
 	data(){
-    	return {
-      		email: '', // Criando uma variavel para linkar no formulario
-      		usuario: {
-        	email: '',
-        	senha: '',
-        	idade: 25
-      	}
+		return {
+			email: '', // Criando uma variavel para linkar no formulario
+			usuario: {
+				email: '',
+				senha: '',
+				idade: 25
+			}
     }
   },
   created() { // mexe com o ciclo de vida da aplicação Vue

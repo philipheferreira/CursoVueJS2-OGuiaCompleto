@@ -1,0 +1,1 @@
+A partir desse capitulo serao utilizados modificadores de input, o lazy, o trim e o number

@@ -7,7 +7,9 @@
 			<form class="painel">
 				<div class="cabecalho">Formulário</div>
 				<Rotulo nome="E-mail">
-					<input type="text" v-model="email"> <!-- V-model cria um two-databinding -->
+					<input type="text" v-model="email"> <!-- V-model cria um two-databinding. v-model nao precisa de dois 
+					pontos pois ele ja sabe que o v-model ser uma diretiva interpretada, entao a aplicacao ja sabe que tem
+					um conteudo dentro das aspas. O v-model ser uma aplicacao que utiliza two-way data binding -->
 				</Rotulo>
 				<Rotulo nome="Senha">
 					<input type="password">

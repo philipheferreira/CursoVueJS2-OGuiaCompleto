@@ -1,3 +1,9 @@
+Esse capitulo aborda bastante sobre V-model, diferentes tipos entradas de 
+usuario, radio button, checkbox, text area, select, input. E construir os proprios 
+componentes para interagir com o usuario, o que ocorre por tras do v-model e como
+faz para ter um componente que suporta o v-model.
+
+
 Para inicializar um projeto é bom se atentar com os comandos de CMD para começar o projeto. O primeiro comando é para verificar a versão caso esteja usando o nvm:
 * nvm ls
 
@@ -18,3 +24,4 @@ Em seguida é só inicializar o projeto:
 * O arquivo main.js que adiciona os projetos necessários ou que precisam ser declarados para serem chamadados
 * O arquivo package.json que tem tudo declarado sobre o projeto
 * O package-lock.json que tem tudo salvo sobre o projeto para baixar ou atualizar quando usar o comando npm install para as dependencias
+
