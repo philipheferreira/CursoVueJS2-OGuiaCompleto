@@ -1,0 +1,38 @@
+
+Caso nao esteja instalado a pasta do pacote NPM, sera necessario instalar com o comando a
+baixo:
+
+	npm install
+
+depois de instalar necessario inicializar o projeto, pode ser usado o comando do npm
+original ou o atralho do vue:
+
+	npm run serve
+
+	ou
+
+	vue serve
+
+
+As diretivas declaradas localmente tem o mesmo funcionamento que um componente declarado
+localmente. Em vez de declarar ele dentro do arquivo main.js, que fizemos essa declaracao
+global antes para criar no capitulo dos componentes, nos iremos criar as diretivas localmente
+na instancia de algum arquivo local, dentro da instancia, export default, usando
+a propriedade directives, como o exemplo a baixo:
+
+	directives: {
+      		'destaque-local': { // criação de diretiva personalizada
+        		bind(el, binding){
+
+          			let atraso = 0
+          			if(binding.modifiers['atrasar']) atraso = 3000
+          			setTimeout(() => {
+            				if(binding.arg === 'fundo'){
+              					el.style.backgroundColor = binding.value
+            				}else{
+              					el.style.color = binding.value
+            				}
+          			}, atraso)
+        		}
+      		}
+  	}

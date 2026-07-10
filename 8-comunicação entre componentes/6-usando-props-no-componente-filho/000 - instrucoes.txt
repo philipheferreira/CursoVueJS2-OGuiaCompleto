@@ -1,0 +1,3 @@
+Nesse cenario ja tem a comunicacao de props do pai com o filho, mas o metodo no filho
+modifica a forma como a mensagem ser mostrada pela componente filho. No caso eu nao 
+modifico o valor dentro da variavel, so a forma que ser mostrada na pagina

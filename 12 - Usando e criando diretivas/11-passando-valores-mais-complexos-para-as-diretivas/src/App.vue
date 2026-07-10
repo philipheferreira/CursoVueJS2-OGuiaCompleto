@@ -29,9 +29,9 @@ export default {
             const aplicarCor = cor => {
               if(binding.arg === 'fundo'){
               el.style.backgroundColor = cor
-            }else{
-              el.style.color = cor
-            }
+              }else{
+                el.style.color = cor
+              }
             }
           let atraso = 0
           if(binding.modifiers['atrasar']) atraso = 3000

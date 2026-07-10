@@ -6,7 +6,8 @@
     <p v-html="'Usando diretiva <strong> V-html </strong>'"></p>
     <hr>
     <p v-destaque="'red'">Usando diretiva personalizada</p> <!-- Chamada da diretiva criada -->
-    <p v-destaque="cor">Usando diretiva personalizada</p> <!-- O v-destaque está reutilizando uma variavel declarado dentro do data return -->
+    <p v-destaque="cor">Usando diretiva personalizada</p> <!-- A diretiva que eu criei, v-destaque, esta interpretando dentro dela a variavel que eu declarei dentro de data,
+    agora como ela ser uma diretiva como as outras, ela consegue interpretar valores de variaveis declaradas dentro de data -->
 	</div>
 </template>
 

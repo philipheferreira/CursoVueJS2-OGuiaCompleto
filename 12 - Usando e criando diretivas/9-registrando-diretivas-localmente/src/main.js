@@ -2,7 +2,9 @@ import Vue from 'vue'
 import App from './App.vue'
 
 Vue.config.productionTip = false
-
+/* Mantive para fazer os codigos anteriores funcionarem. Agora a diretiva funciona localmente, nao sendo mais necessario usar essas para as outras funcionarem, se tirar apenas as que foram
+declaradas nas aulas anteiores irao parar de funcionar porque elas funcionam com essa declaracao global, as ultimas duas funcionam com a declaracao local, que foi localmente declarada
+no componente App.vue */
 Vue.directive('destaque', {
   bind(el, binding){
 

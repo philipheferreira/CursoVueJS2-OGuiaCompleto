@@ -14,7 +14,7 @@
     <h1>Diretivas Registradas Localmente</h1>
 
     <p v-destaque-local:fundo.atrasar="'lightblue'">Usando diretiva personalizada localmente</p>
-    <p v-destaque-local.atrsar="cor">Usando diretiva personalizada localmente</p>
+    <p v-destaque-local.atrasar="cor">Usando diretiva personalizada localmente</p>
 
 	</div>
 </template>

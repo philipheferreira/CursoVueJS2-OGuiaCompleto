@@ -1,0 +1,2 @@
+Aqui ser criado o props para mandar a informacao para um dos filhos. Sendo que o componente
+pai atraves da props manda a informacao para o componente filho

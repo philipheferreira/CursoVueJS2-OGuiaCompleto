@@ -1,2 +1,5 @@
 As diretivas sao as funcionalidades pre definidas no Vue, como o V-once, V-for, V-if.
-Sao comandos que eu posso declarar para reutilizar no codigo para as minhas operacoes
+Sao comandos que eu posso declarar para reutilizar no codigo para as minhas operacoes.
+Mesmo que exista diretivas proprias do Vue eu posso criar minhas proprias diretivas, em que
+os parametros dela serao o el, binding e o vnode. Sendo que o el vai ser o parametro principal
+das diretivas, o binding utilizado em situacoes especificas e o vnode nao tao utilizado

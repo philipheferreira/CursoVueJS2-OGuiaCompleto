@@ -28,22 +28,22 @@ export default {
         bind(el, binding){
             const aplicarCor = cor => {
               if(binding.arg === 'fundo'){
-              el.style.backgroundColor = cor
-            }else{
-              el.style.color = cor
-            }
+                el.style.backgroundColor = cor
+              }else{
+                el.style.color = cor
+              }
             }
           let atraso = 0
-          if(binding.modifiers['atrasar']) atraso = 3000
+          if(binding.modifiers['atrasar']) atraso = 3000 /* Esse ser o primeiro modificador aplicado */
           
           const cor1 = binding.value
           const cor2 = 'purple'
           let corAtual = cor1
 
           setTimeout(() => {
-            if(binding.modifiers['alternar']){
+            if(binding.modifiers['alternar']){/* Esse ser o segundo modificador aplicado */
               setInterval(() => {
-                corAtual = corAtual === cor1 ? cor2 : cor1
+                corAtual = corAtual === cor1 ? cor2 : cor1 /* atribuicao ternaria */
                 aplicarCor(corAtual)
               }, 1000)
             } else {
