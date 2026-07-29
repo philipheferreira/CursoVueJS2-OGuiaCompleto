@@ -1,0 +1,6 @@
+Modo hash -> localhost:8080/#/...
+
+Modo history -> localhost:8080/...
+
+O hash nao ser enviado para o servidor, ele fica no bronwser, o que ser enviado para 
+o servidor vai ser uma raiz enviada para a aplicacao (localhost:8080)

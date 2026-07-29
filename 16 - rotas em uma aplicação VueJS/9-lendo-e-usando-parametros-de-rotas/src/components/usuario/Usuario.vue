@@ -19,6 +19,7 @@ export default {
         },
     methods: {
         irParaInicio(){
+            // this.$router.push('/') // o push faz com que repasse essa informação para o path declarado
             this.$router.push({path: '/'})
         }
     }
