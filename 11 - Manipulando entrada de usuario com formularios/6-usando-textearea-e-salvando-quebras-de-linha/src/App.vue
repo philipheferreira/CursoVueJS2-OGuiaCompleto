@@ -1,4 +1,4 @@
-<!-- Foco de agora são os modificadores de input -->
+<!-- Foco de agora são os modificadores de input, nessa aula estamos usando o campo input mensagem, utilizando o textarea -->
 
 <template>
 	<div id="app">

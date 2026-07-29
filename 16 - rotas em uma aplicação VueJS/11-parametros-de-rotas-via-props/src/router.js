@@ -12,6 +12,7 @@ export default new Router({
         component: Inicio
     }, {
         path: '/usuario/:id',
-        component: Usuario
+        component: Usuario,
+        props: true /* defino que sera repassado um valor props pela rota e sera recebido */
     }]
 })

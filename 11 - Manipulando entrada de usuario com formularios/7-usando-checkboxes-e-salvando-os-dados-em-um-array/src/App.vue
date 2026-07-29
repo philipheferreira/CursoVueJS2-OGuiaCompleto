@@ -55,7 +55,8 @@
 				<Rotulo nome="Marque as Opções">
 					<span>
 						<ul>
-							<li v-for="c in caracteristicas" :key="c"> {{ c }} </li> <!-- Criado campo para visualizar as opções -->
+							<li v-for="c in caracteristicas" :key="c"> {{ c }} </li> <!-- Criado campo para visualizar as opções, 
+							como ser um array necessito usar o v for para mapear cada uma das caracteristicas -->
 						</ul>
 					</span>
 				</Rotulo>

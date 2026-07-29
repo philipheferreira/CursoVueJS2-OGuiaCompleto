@@ -10,7 +10,8 @@
 					<input type="text" v-model.trim="usuario.email"> <!-- Modificador trim que tira os espaços em branco antes e depois do nome digitado -->
 				</Rotulo>
 				<Rotulo nome="Senha">
-					<input type="password" v-model.lazy="usuario.senha"> <!-- Utilizar o modificador lazy significa que ele só vai atualizar os campos quando sair do campo input -->
+					<input type="password" v-model.lazy="usuario.senha"> <!-- Utilizar o modificador lazy significa que ele só vai atualizar os campos quando sair do campo input. Posso encadear os 
+					modificadores. ex: v-model.trim.lazy -->
 				</Rotulo>
 				<Rotulo nome="Idade">
 					<input type="number" v-model.number="usuario.idade"> <!-- Converte a string gerada em um valor numerico normal -->
@@ -48,7 +49,7 @@
 					<span> {{ usuario.senha }} </span> <!-- Feita a interpolação -->
 				</Rotulo>
 				<Rotulo nome="Idade">
-					<span> {{ usuario.idade }} </span> <!-- Feita a interpolação -->
+					<span> {{ usuario.idade }} {{ tipoIdade }} </span> <!-- Feita a interpolação -->
 				</Rotulo>
 				<Rotulo nome="Mensagem">
 					<span>???</span>
@@ -78,7 +79,7 @@ export default {
 	name: 'app',
 	components: { Rotulo, Escolha },
 	computed: {
-		tipo() {
+		tipoIdade() {
 			return typeof this.usuario.idade
 		}
 	},

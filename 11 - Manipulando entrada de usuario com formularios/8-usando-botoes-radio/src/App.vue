@@ -1,5 +1,6 @@
 <!-- Foco de agora são os modificadores de input -->
-
+<!-- O componente botao radio se assemelha ao checkbox, a diferenca que o radio so armazena
+ 1 tipo de valor, enquanto o checkbox armazenava um array de valores-->
 <template>
 	<div id="app">
 		<h1>Registrar Reclamação</h1>

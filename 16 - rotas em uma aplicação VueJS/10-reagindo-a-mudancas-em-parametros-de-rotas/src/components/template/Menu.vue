@@ -1,6 +1,6 @@
 <template>
     <div>
-        <nav>
+        <nav class="menu">
             <ul>
                 <router-link to="/" tag="li" active-class="active" exact>
                     <a>Home</a>

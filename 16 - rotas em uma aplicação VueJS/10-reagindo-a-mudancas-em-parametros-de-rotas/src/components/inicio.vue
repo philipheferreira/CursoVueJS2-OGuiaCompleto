@@ -1,12 +1,12 @@
 <template>
-    <div>
-        Inicio
-    </div>
+  <div>
+    Inicio
+  </div>
 </template>
 
 <script>
 export default {
-    name: 'inicioComponent'
+    name:'inicioComponent'
 }
 </script>
 
